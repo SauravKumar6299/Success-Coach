@@ -3,3 +3,4 @@ gspread
 python-dotenv
 openai
 google-auth
+chromadb
