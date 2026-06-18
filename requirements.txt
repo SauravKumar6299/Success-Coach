@@ -1,0 +1,5 @@
+streamlit
+gspread
+python-dotenv
+openai
+google-auth
