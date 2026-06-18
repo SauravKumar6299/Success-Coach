@@ -1,0 +1,350 @@
+[
+    {
+        "roll_no": "STU001",
+        "id": "1781762477",
+        "title": "WHAT IS RAG?...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "WHAT IS RAG?"
+            },
+            {
+                "role": "user",
+                "content": "hi"
+            },
+            {
+                "role": "user",
+                "content": "hi"
+            },
+            {
+                "role": "user",
+                "content": "hii"
+            },
+            {
+                "role": "user",
+                "content": "hey"
+            },
+            {
+                "role": "user",
+                "content": "hey"
+            },
+            {
+                "role": "user",
+                "content": "hey"
+            },
+            {
+                "role": "user",
+                "content": "hey"
+            },
+            {
+                "role": "assistant",
+                "content": "Hi! \ud83d\udc4b\n\n**RAG** stands for **Retrieval-Augmented Generation**.\n\n### In simple words:\nIt is a method where an AI model:\n1. **Retrieves** relevant information from a knowledge source (like documents, PDFs, or a database),\n2. then **Generates** an answer using that information.\n\n### Why it is useful:\n- Helps the AI answer using **current or private data**\n- Reduces **hallucinations** (making up answers)\n- Lets you build chatbots over your own documents\n\n### Example:\nIf you ask:\n> \u201cWhat is our company leave policy?\u201d\n\nA RAG system will:\n- search the leave-policy document,\n- find the relevant section,\n- and then generate a clear answer based on that text.\n\nIf you want, I can also explain:\n- **RAG in AI/LLMs**\n- **RAG architecture**\n- **RAG vs fine-tuning**"
+            },
+            {
+                "role": "user",
+                "content": "when is my deep learning exam ?"
+            },
+            {
+                "role": "assistant",
+                "content": "I don\u2019t have access to your exam schedule, so I can\u2019t see when your deep learning exam is.\n\nIf you want, I can help you find it quickly:\n- check your **college LMS / portal**\n- look at your **timetable / exam notification**\n- ask your **class coordinator / professor**\n- search for keywords like **\u201cDeep Learning exam schedule\u201d**\n\nIf you paste your timetable or exam notice here, I can help you identify the date."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781768599",
+        "title": "Active Conversation",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Starting a fresh session. How can I assist you now, Arjun Kumar?"
+            },
+            {
+                "role": "user",
+                "content": "what is deep learning ?"
+            },
+            {
+                "role": "assistant",
+                "content": "Deep learning is a type of machine learning that uses **neural networks with many layers** to learn patterns from data.\n\n### Simple idea\nIt tries to imitate, in a very rough way, how the human brain processes information:\n- **Input layer** takes data\n- **Hidden layers** learn features and patterns\n- **Output layer** gives the result\n\n### What makes it \u201cdeep\u201d?\n\u201cDeep\u201d means the network has **multiple layers**, which lets it learn complex things automatically, such as:\n- recognizing faces in photos\n- understanding speech\n- translating languages\n- detecting spam\n- driving cars autonomously\n\n### Example\nIf you give a deep learning model many pictures of cats and dogs:\n- early layers may learn edges and shapes\n- middle layers may learn ears, eyes, fur patterns\n- later layers may learn the concept of \u201ccat\u201d or \u201cdog\u201d\n\n### Why it\u2019s powerful\nDeep learning works very well when there is:\n- a lot of data\n- powerful computers\n- complex tasks like images, audio, and text\n\n### Common deep learning models\n- **CNNs**: good for images\n- **RNNs / LSTMs**: used for sequences and text\n- **Transformers**: used in modern NLP and AI tools like chatbots\n\nIf you want, I can also explain it:\n1. in **very simple terms**,  \n2. with a **diagram**, or  \n3. with a **Python example**."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781768643",
+        "title": "what is an ai agent ?...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "what is an ai agent ?"
+            },
+            {
+                "role": "assistant",
+                "content": "An **AI agent** is a system that can **perceive its environment, make decisions, and take actions to achieve a goal**.\n\n### Simple idea\nThink of it like a smart assistant that:\n1. **Observes** what\u2019s happening\n2. **Decides** what to do\n3. **Acts** to move toward a goal\n4. Repeats this cycle\n\n### Examples\n- A **chatbot** that answers questions\n- A **self-driving car** that detects traffic and drives safely\n- A **recommendation system** that suggests movies based on your behavior\n- A **game-playing bot** that chooses moves to win\n\n### Basic components of an AI agent\n- **Input / sensors**: data from the world\n- **Decision-making / brain**: rules, machine learning, or an LLM\n- **Actions / output**: what it does next\n- **Goal**: the task it is trying to complete\n\n### In modern AI\nAn AI agent may also:\n- use tools like search, calculators, or APIs\n- remember past interactions\n- plan multi-step tasks\n- act with some autonomy\n\n### Short definition\n> An AI agent is an AI-powered system that can independently perform tasks by sensing, deciding, and acting to achieve a goal.\n\nIf you want, I can also explain:\n- **AI agent vs chatbot**\n- **types of AI agents**\n- **how AI agents work step by step**"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781775548",
+        "title": "my attendance percentage ...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "my attendance percentage "
+            },
+            {
+                "role": "user",
+                "content": "my attendance perceantage "
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781775812",
+        "title": "what is my attendance percentage ?...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "what is my attendance percentage ?"
+            },
+            {
+                "role": "assistant",
+                "content": "Your attendance percentage so far is **94.0%**.\n\nBreakdown:\n- Total classes scheduled: **30**\n- Total classes attended: **28**\n\nWeekly attendance:\n- 2026-05-05: 100%\n- 2026-05-12: 80%\n- 2026-05-19: 100%\n- 2026-05-26: 100%\n- 2026-06-02: 80%\n- 2026-06-09: 100%\n\nIf you want, I can also tell you **how many more classes you can miss** and still stay above a target attendance like **75% or 85%**."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781776170",
+        "title": "what is my exam schedule of deep le...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "what is my exam schedule of deep learning exam "
+            },
+            {
+                "role": "assistant",
+                "content": "I couldn\u2019t find your profile in the roster, so I\u2019m unable to retrieve your Deep Learning exam schedule right now.\n\nPlease send me either:\n- your **full name as registered**, or\n- your **roll number**\n\nand I\u2019ll check it again."
+            },
+            {
+                "role": "user",
+                "content": "Arjun Kumar , STU001"
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m still not able to find a matching profile for **Arjun Kumar / STU001** in the roster, so I can\u2019t confirm your Deep Learning exam schedule yet.\n\nPlease double-check and send one of these exactly as registered:\n- **Full name**\n- **Roll number**\n- or both, if there may be a spelling mismatch\n\nIf you want, I can also help you format the details to resend."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781776482",
+        "title": "my exam schedule ...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "my exam schedule "
+            },
+            {
+                "role": "user",
+                "content": "exam schedule "
+            },
+            {
+                "role": "assistant",
+                "content": "I found your student record:\n\n- **Name:** Arjun Kumar\n- **Program:** Data Science\n- **Cohort:** Cohort-A\n\nI don\u2019t have the actual exam dates/times in the info available to me right now. If you want, I can help you draft a message to your coordinator/manager to get the **full exam schedule**."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781776642",
+        "title": "my exam schedule ...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "my exam schedule "
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun Kumar, I\u2019ve fetched your profile details, but I don\u2019t yet have the actual exam timetable in the data available to me.\n\nWhat I do know:\n- Name: Arjun Kumar\n- Program: Data Science\n- Cohort: Cohort-A\n\nIf you want, I can help you with:\n- a study plan based on your exam dates,\n- a timetable template,\n- or you can share the exam dates and I\u2019ll organize them neatly for you."
+            },
+            {
+                "role": "user",
+                "content": "my attendance record "
+            },
+            {
+                "role": "assistant",
+                "content": "Here\u2019s your attendance record, Arjun Kumar:\n\n### Weekly Attendance\n- **2026-05-05:** 5/5 attended \u2014 **100%**\n- **2026-05-12:** 4/5 attended \u2014 **80%**\n- **2026-05-19:** 5/5 attended \u2014 **100%**\n- **2026-05-26:** 5/5 attended \u2014 **100%**\n- **2026-06-02:** 4/5 attended \u2014 **80%**\n- **2026-06-09:** 5/5 attended \u2014 **100%**\n\n### Overall\n- **Total classes scheduled:** 30\n- **Total classes attended:** 28\n- **Overall attendance:** **93.3%**\n\nIf you want, I can also:\n- calculate how many classes you can miss before dropping below 75%, or\n- make a simple attendance tracker for you."
+            },
+            {
+                "role": "user",
+                "content": "my exam scores "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m unable to retrieve your exam scores right now because the roster lookup returned:\n\n**\u201cInvalid Name or Roll Number. Profile not found in roster.\u201d**\n\nIf you\u2019d like, I can still help you in either of these ways:\n1. **You provide the subjects and scores** and I\u2019ll organize them neatly.\n2. **You provide your correct name/roll number** and I can try again."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781776816",
+        "title": "my exam schedule ...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "my exam schedule "
+            },
+            {
+                "role": "assistant",
+                "content": "I found your student profile:\n\n- **Name:** Arjun Kumar  \n- **Student ID:** STU001  \n- **Program:** Data Science  \n- **Cohort:** Cohort-A  \n\nI don\u2019t have the actual exam dates in the current data source yet. If you want, I can help you format a schedule once you share the dates, or I can check anything else related to your exams."
+            },
+            {
+                "role": "user",
+                "content": "attendance percentage "
+            },
+            {
+                "role": "assistant",
+                "content": "Your attendance records show:\n\n- **2026-05-05:** 100%\n- **2026-05-12:** 80%\n- **2026-05-19:** 100%\n- **2026-05-26:** 100%\n- **2026-06-02:** 80%\n- **2026-06-09:** 100%\n\n**Overall attendance across these weeks:** **94%**  \n- Total classes scheduled: **30**\n- Total classes attended: **28**\n\nIf you want, I can also calculate:\n- **minimum attendance needed for exam eligibility**\n- **how many classes you can miss from now on**\n- a **week-wise attendance summary table**"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781777403",
+        "title": "my attendance ...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "my attendance "
+            },
+            {
+                "role": "user",
+                "content": "my attendance "
+            },
+            {
+                "role": "assistant",
+                "content": "Here\u2019s your attendance summary, Arjun Kumar:\n\n- 2026-05-05: 5/5 attended \u2014 100%\n- 2026-05-12: 4/5 attended \u2014 80%\n- 2026-05-19: 5/5 attended \u2014 100%\n- 2026-05-26: 5/5 attended \u2014 100%\n- 2026-06-02: 4/5 attended \u2014 80%\n- 2026-06-09: 5/5 attended \u2014 100%\n\nOverall:\n- Classes scheduled: 30\n- Classes attended: 28\n- Total attendance: 93.3%\n\nIf you want, I can also show this as a week-by-week chart or calculate how many classes you can miss before dropping below 75%."
+            },
+            {
+                "role": "user",
+                "content": "my exam scores "
+            },
+            {
+                "role": "assistant",
+                "content": "Here are your exam scores, Arjun Kumar:\n\n- Python Programming \u2014 78/100\n- Statistics for DS \u2014 70/100\n- Machine Learning Basics \u2014 65/100\n- Data Structures & Algorithms \u2014 72/100\n\nSummary:\n- Total scored: 285/400\n- Average score: 71.25%\n\nIf you want, I can also rank your subjects from strongest to weakest or estimate your overall grade."
+            },
+            {
+                "role": "user",
+                "content": "my exam schedule "
+            },
+            {
+                "role": "assistant",
+                "content": "I found your profile, Arjun Kumar, but I don\u2019t have the exam schedule data available in the current response.\n\nProfile found:\n- Program: Data Science\n- Cohort: Cohort-A\n\nIf you want, I can help you format a schedule once you share it, or you can ask me for:\n- attendance\n- exam scores\n- timetable\n- progress summary"
+            },
+            {
+                "role": "user",
+                "content": "my upcoming exam dates "
+            },
+            {
+                "role": "assistant",
+                "content": "I found your student profile, Arjun Kumar, but I still don\u2019t have the upcoming exam dates in the available data.\n\nProfile:\n- Program: Data Science\n- Cohort: Cohort-A\n\nAvailable info:\n- Student ID: STU001\n\nIf you want, I can help you with:\n- attendance summary\n- exam scores\n- progress summary\n- a template to track upcoming exams"
+            },
+            {
+                "role": "user",
+                "content": "you have a tool call to find exam dates, use that "
+            },
+            {
+                "role": "assistant",
+                "content": "I checked the available exam-schedule tool, but it returned only your student profile and manager email, not any actual exam dates.\n\nWhat I found:\n- Student ID: STU001\n- Name: Arjun Kumar\n- Program: Data Science\n- Cohort: Cohort-A\n- Manager email: manager.a@nxtwave.com\n\nSo, I still can\u2019t see the upcoming exam dates from the tool output. If you want, I can help you draft a message to your manager to ask for the schedule."
+            },
+            {
+                "role": "user",
+                "content": "what are three tools you can call ?"
+            },
+            {
+                "role": "assistant",
+                "content": "I can call these three tools:\n\n1. `get_attendance`  \n2. `get_exam_score`  \n3. `get_exam_schedule`"
+            },
+            {
+                "role": "user",
+                "content": "what is 3rd ?"
+            },
+            {
+                "role": "assistant",
+                "content": "The 3rd tool is `get_exam_schedule`."
+            },
+            {
+                "role": "user",
+                "content": "what will it give "
+            },
+            {
+                "role": "assistant",
+                "content": "`get_exam_schedule` is intended to return your upcoming exam timetable, including exam dates and schedule details for the current student."
+            },
+            {
+                "role": "user",
+                "content": "so give me my exam time table , call that tool "
+            },
+            {
+                "role": "assistant",
+                "content": "I called the exam schedule tool, but it only returned your student profile and manager email \u2014 not the actual exam timetable.\n\nWhat I got:\n- Student ID: STU001\n- Name: Arjun Kumar\n- Program: Data Science\n- Cohort: Cohort-A\n- Manager email: manager.a@nxtwave.com\n\nSo I still can\u2019t show the exam time table from the current tool data. If you want, I can help you draft a quick message to your manager asking for the timetable."
+            },
+            {
+                "role": "user",
+                "content": "try again "
+            },
+            {
+                "role": "assistant",
+                "content": "Here\u2019s your upcoming exam timetable, Arjun Kumar:\n\n- Deep Learning \u2014 2026-06-20 \u2014 Module Exam\n- Advanced DSA \u2014 2026-06-27 \u2014 Module Exam\n- Capstone Project \u2014 2026-07-15 \u2014 Project Submission\n\nIf you want, I can also sort these by date, count how many days are left, or help you make a revision plan."
+            }
+        ]
+    }
+]
