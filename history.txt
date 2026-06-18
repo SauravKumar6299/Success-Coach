@@ -346,5 +346,133 @@
                 "content": "Here\u2019s your upcoming exam timetable, Arjun Kumar:\n\n- Deep Learning \u2014 2026-06-20 \u2014 Module Exam\n- Advanced DSA \u2014 2026-06-27 \u2014 Module Exam\n- Capstone Project \u2014 2026-07-15 \u2014 Project Submission\n\nIf you want, I can also sort these by date, count how many days are left, or help you make a revision plan."
             }
         ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781786604",
+        "title": "tell me about steps to sign up to p...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "tell me about steps to sign up to platform"
+            },
+            {
+                "role": "assistant",
+                "content": "To sign up and access the platform, follow these steps:\n\n1. Open **Google Chrome**.\n2. Go to **learning.ccbp.in**.\n3. Enter your **registered mobile number**.\n4. You\u2019ll receive an **OTP** on your registered mobile number and email.\n5. Enter the **OTP** to log in.\n6. Complete your **profile details** accurately, such as:\n   - Name\n   - Year of Graduation\n   - Contact Number\n   - Other required details\n7. After login, watch the **induction video**.\n8. Once the video is completed, click **Continue** to unlock your learning schedule.\n9. Go to **Learning Portal \u2192 Home Page \u2192 Your Schedule** to view your learning plan.\n\nIf you want, I can also give you a very short \u201csignup checklist\u201d version."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781800358",
+        "title": "my exam schedule ...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "my exam schedule "
+            },
+            {
+                "role": "assistant",
+                "content": "Here is your exam schedule:\n\n1. Deep Learning \u2014 Module Exam  \n   Date: 2026-06-20\n\n2. Advanced DSA \u2014 Module Exam  \n   Date: 2026-06-27\n\n3. Capstone Project \u2014 Project Submission  \n   Date: 2026-07-15\n\nIf you want, I can also help you make a study plan based on these dates."
+            },
+            {
+                "role": "user",
+                "content": "hey "
+            },
+            {
+                "role": "assistant",
+                "content": "Hi Arjun. How can I help with your studies?"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781801204",
+        "title": "tell me about french revolution...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "tell me about french revolution"
+            },
+            {
+                "role": "assistant",
+                "content": "I can help with **academic topics**, but I should keep it concise and study-focused.\n\n**French Revolution (1789\u20131799):**\n- A major political and social upheaval in France.\n- Main causes:\n  - **Social inequality** under the Three Estates system\n  - **Financial crisis** and heavy debt\n  - **Tax burden** on the common people\n  - Influence of **Enlightenment ideas**\n- Key events:\n  - **1789:** Estates-General called; **Storming of the Bastille**\n  - **Declaration of the Rights of Man and of the Citizen**\n  - **1791\u20131792:** Monarchy weakened and then abolished\n  - **Reign of Terror** under Robespierre\n  - **1799:** Napoleon rises to power, ending the revolution\n- Results:\n  - End of absolute monarchy in France\n  - Spread of ideas like **liberty, equality, and citizenship**\n  - Inspired later revolutions worldwide\n\nIf you want, I can also give you:\n1. a **short 5-mark answer**, or  \n2. **causes, events, and effects** in bullet points for exam revision."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781801266",
+        "title": "tell me about french revolution...",
+        "date": "Jun 18, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "tell me about french revolution"
+            },
+            {
+                "role": "assistant",
+                "content": "I can help with **program-related studies**, but I can\u2019t provide general history help like the French Revolution.\n\nIf you want, I can help you with something **Data Science-related** instead, such as:\n- statistics\n- Python\n- SQL\n- machine learning\n- exam prep\n- schedule, attendance, or marks"
+            },
+            {
+                "role": "user",
+                "content": "i want refund of my course "
+            },
+            {
+                "role": "assistant",
+                "content": "I can\u2019t help with refund requests.\n\nIf you need, I can help you with **course-related information** such as:\n- class schedule\n- attendance\n- exam timetable\n- exam scores\n- program specifications or policies"
+            },
+            {
+                "role": "user",
+                "content": "no i have been blocked , i need refund "
+            },
+            {
+                "role": "assistant",
+                "content": "I understand you\u2019re saying you\u2019ve been blocked, but I can\u2019t process or advise on refunds here.\n\nFor the appropriate next step, please contact your institution\u2019s **official support or billing office** through their authorized channel.\n\nIf you want, I can still help with:\n- checking your **attendance**\n- checking your **exam marks**\n- checking your **exam schedule**"
+            },
+            {
+                "role": "user",
+                "content": "how many students are there in my class "
+            },
+            {
+                "role": "assistant",
+                "content": "I can\u2019t provide personal or private information about other students.\n\nIf you need class-related details for **your own program**, I can help with:\n- your schedule\n- your attendance\n- your exam marks\n- your exam timetable"
+            },
+            {
+                "role": "user",
+                "content": "how many tools are you using "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m not using any tools right now."
+            },
+            {
+                "role": "user",
+                "content": "how many can you use "
+            },
+            {
+                "role": "assistant",
+                "content": "I can use the tools available in the system, and I can also run multiple eligible tools in parallel when needed.\n\nFor your studies, I can help check:\n- attendance\n- exam scores\n- exam schedule\n- program/course policy details"
+            }
+        ]
     }
 ]

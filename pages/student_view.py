@@ -9,6 +9,7 @@ from openai import OpenAI
 from tools.get_attendance import get_attendance
 from tools.get_exam_score import get_exam_score
 from tools.get_exam_schedule import get_exam_schedule
+from tools.query_rag import query_rag_system
 
 # Load environment variables from .env file
 load_dotenv()
@@ -205,15 +206,51 @@ if st.session_state.messages[-1]["role"] == "user":
                             "description": "Retrieves all upcoming exam timetables, dates, and schedule details for the current student.",
                             "parameters": {"type": "object", "properties": {}}
                         }
+                    },
+                    {
+                        "type": "function",
+                        "function": {
+                            "name": "query_company_documents",
+                            "description": "Searches company internal documents, course descriptions, policies, and program specifications.",
+                            "parameters": {
+                                "type": "object",
+                                "properties": {
+                                    "search_query": {
+                                        "type": "string",
+                                        "description": "The specific query text used to find descriptive information from corporate manuals."
+                                    }
+                                },
+                                "required": ["search_query"]
+                            }
+                        }
                     }
                 ]
 
-                # Format logs into basic OpenAI API message objects
+               # Format logs into basic OpenAI API message objects
                 formatted_contents = [{"role": m["role"], "content": m["content"]} for m in st.session_state.messages]
                 
+                # --- NEW CODE: INJECT YOUR SYSTEM PROMPT HERE ---
+                system_guidelines = f"""
+                You are a highly intelligent and polite AI Study Companion for {student_name}.
+                Your goal is to help them succeed in their {student_program} program.
+                
+                Guidelines:
+                1. Always be encouraging but strict about academic integrity.
+                2. Do not write complete assignments for the student.
+                3. Use the provided tools to check their schedule, attendance, and grades when asked.
+                4. Keep your answers concise, well-formatted, and easy to read.
+                5. Dont provide any personal opinions or advice outside of academic context.
+                6. Dont entertain any requests for unethical or illegal activities, and politely decline if asked.
+                7. Dont provide any personal information or data about other students or staff.
+                8. Dont entertain any doubts other than program-related questions. If the question is unrelated, politely redirect them to ask about their studies.
+                """
+                
+                # Insert the system prompt at index 0 (the very beginning)
+                formatted_contents.insert(0, {"role": "system", "content": system_guidelines})
+
                 # First Call out to OpenAI to analyze intent
                 response = client.chat.completions.create(
-                    model="gpt-5.4-mini-2026-03-17", # Standard dynamic fallback model name
+                    model="gpt-5.4-mini-2026-03-17", 
                     messages=formatted_contents,
                     tools=tools,
                     tool_choice="auto"
@@ -229,6 +266,7 @@ if st.session_state.messages[-1]["role"] == "user":
                     
                     for tool_call in tool_calls:
                         function_name = tool_call.function.name
+                        function_args = json.loads(tool_call.function.arguments)
                         tool_output_string = ""
                         
                         # Route dynamically to your tool functions
@@ -237,13 +275,16 @@ if st.session_state.messages[-1]["role"] == "user":
                             tool_output_string = json.dumps(result) if success else str(result)
                             
                         elif function_name == "get_exam_score":
-                            # FIXED: Only pass roll_no to match function signature
                             success, result = get_exam_score(roll_no=student_roll)
                             tool_output_string = json.dumps(result) if success else str(result)
                             
                         elif function_name == "get_exam_schedule":
                             success, result = get_exam_schedule(roll_no=student_roll)
                             tool_output_string = json.dumps(result) if success else str(result)
+                            
+                        elif function_name == "query_company_documents":
+                            query_text = function_args.get("search_query", prompt)
+                            tool_output_string = query_rag_system(user_query=query_text)
 
                         # Append each separate tool call response structural packet 
                         formatted_contents.append({
@@ -305,18 +346,3 @@ with history_col:
                 st.session_state.current_chat_title = item['title']
                 st.session_state.messages = item['messages']
                 st.rerun()
-
-
-
-
-
-
-
-
-# import chromadb
-
-# client = chromadb.CloudClient(
-#   api_key='ck-3CCyxoSW6pnfAsg1jWhrVgpny5WmoDKMG2RfdPNRTN6G',
-#   tenant='dcf24aef-a37a-4f7d-8c50-177ecfd74271',
-#   database='SUCCESS_COACH'
-# )
