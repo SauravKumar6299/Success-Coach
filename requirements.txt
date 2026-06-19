@@ -10,3 +10,4 @@ langchain
 langchain_openai
 transformers
 torch
+torchvision
