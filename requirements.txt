@@ -9,3 +9,4 @@ mem0ai
 langchain
 langchain_openai
 transformers
+torch
