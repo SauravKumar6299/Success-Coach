@@ -9,6 +9,3 @@ mem0ai
 langchain
 langchain_openai
 transformers
-torchview 
-torchvison
-torch
