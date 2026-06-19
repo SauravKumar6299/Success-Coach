@@ -1430,5 +1430,73 @@
                 "content": "Arjun, I\u2019m really sorry you\u2019re alone with this right now.\n\n**Please do these 3 things immediately:**\n1. **Move to a place where other people are** \u2014 lobby, security desk, neighbor\u2019s door, outside your room.\n2. **Call emergency services now** or ask someone nearby to call for you.\n3. **Tell one real person this exact sentence:**\n   > \u201cI\u2019m unsafe being alone right now. Please stay with me and help me get support.\u201d\n\n**If you can, send this text to someone now:**\n> I\u2019m not safe being alone right now. Please call me and stay with me.\n\n**Important:** Do not stay alone with anything you could use to hurt yourself.\n\nReply with just:\n- **\u201cwith someone\u201d** if you are with another person\n- **\u201ccalled\u201d** if you called emergency help\n\nI\u2019m here with you, one step at a time."
             }
         ]
+    },
+    {
+        "roll_no": "STU003",
+        "id": "1781869335",
+        "title": "I like python more than cpp...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Rahul Verma! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "I like python more than cpp"
+            },
+            {
+                "role": "assistant",
+                "content": "That\u2019s totally fine \u2014 Python is a very strong choice for Data Science.\n\nA good academic approach is:\n- **Python** for data analysis, machine learning, and scripting\n- **C++** mainly for performance-heavy systems or low-level programming\n\nIf your program focuses on Data Science, Python is often more relevant and practical.\n\nIf you want, I can help you compare **Python vs C++ for your course work**."
+            },
+            {
+                "role": "user",
+                "content": "i can make ML models with it "
+            },
+            {
+                "role": "assistant",
+                "content": "Yes \u2014 **Python is commonly used to build ML models**.\n\nTypical workflow:\n- **Load data** with `pandas`\n- **Clean/preprocess** data with `numpy`, `pandas`, `scikit-learn`\n- **Train models** using `scikit-learn`, `TensorFlow`, or `PyTorch`\n- **Evaluate** using metrics like accuracy, precision, recall, RMSE\n\nIf you want, I can help you understand:\n- the **basic ML pipeline in Python**\n- the **most important Python libraries for ML**\n- or a **small example model structure**"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781869496",
+        "title": "what are my preferences ?...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "what are my preferences ?"
+            },
+            {
+                "role": "assistant",
+                "content": "I don\u2019t have any specific personal preferences logged for you yet.\n\nWhat I do know is your study-support settings:\n- I should help with Data Science program-related questions\n- I should keep responses concise and well-formatted\n- I should be encouraging, but strict about academic integrity\n- I should not write complete assignments for you\n- I should use the available tools when you ask about schedule, attendance, or grades\n\nIf you want, I can also help you set a study preference style for future chats, like:\n- concise vs detailed\n- step-by-step explanations\n- examples first or theory first"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781869555",
+        "title": "what are my preferences ?...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "what are my preferences ?"
+            },
+            {
+                "role": "assistant",
+                "content": "No specific personal preferences are logged for you yet.\n\nWhat I do have is your study-support profile:\n- I should keep responses concise, clear, and well-formatted\n- I should be encouraging, but strict about academic integrity\n- I should help only with program-related questions\n- I should not write complete assignments for you\n\nIf you want, I can also help you set study preferences for future chats."
+            }
+        ]
     }
 ]

@@ -13,7 +13,7 @@ def search_memory(query, user_id):
     try:
         results = client.search(
             query,
-            filters={"user_id": user_id}, 
+            filters={'user_id': user_id}, 
             limit=20
         )
         return {"status": "success", "results": results}

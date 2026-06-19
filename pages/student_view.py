@@ -279,7 +279,6 @@ if "messages" not in st.session_state:
 if "student_memories" not in st.session_state:
     try:
         mem_response = get_memory(user_id=student_roll)
-
         facts = []
 
         if (
@@ -308,7 +307,7 @@ if "student_memories" not in st.session_state:
             if facts
             else "No specific preferences logged yet."
         )
-
+        print(facts)
     except Exception as e:
         print(f"Memory Fetch Error: {e}")
 
@@ -477,7 +476,7 @@ if st.session_state.messages[-1]["role"] == "user":
                     tools=tools,
                     tool_choice="auto"
                 )
-                
+
                 response_message = response.choices[0].message
                 tool_calls = response_message.tool_calls
                 
