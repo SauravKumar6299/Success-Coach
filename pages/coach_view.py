@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from requests.exceptions import ConnectionError
 
 from tools.get_sheets_client import get_sheets_client
+from tools.memory import search_memory  # Imported the mem0 search function
 
 st.set_page_config(page_title="Coach Console", page_icon="🧠", layout="wide")
 
@@ -83,6 +84,10 @@ if "plan_generated" not in st.session_state:
 if "student_data" not in st.session_state:
     st.session_state.student_data = pd.DataFrame()
 
+# Track fetched memories so we don't re-fetch constantly on rerun
+if "student_contexts" not in st.session_state:
+    st.session_state.student_contexts = {}
+
 # 2. Main Generation Layout (Split into action panel and results)
 col1, col2 = st.columns([1, 2], gap="large")
 
@@ -147,6 +152,51 @@ with col2:
                         if timestamp:
                             st.markdown(f"<div style='font-size: 0.75em; color: #94A3B8; margin-top: 4px;'>Logged: {timestamp}</div>", unsafe_allow_html=True)
                         
+                        # --- MEMORY SEARCH INTEGRATION ---
+                        with st.expander("🔍 View Relevant Student Context"):
+                            context_key = f"context_{sheet_row}_{student_id}"
+                            
+                            # Check if we already fetched memory for this entry
+                            if context_key in st.session_state.student_contexts:
+                                st.markdown("**Relevant Memories & Context:**")
+                                st.markdown(st.session_state.student_contexts[context_key])
+                            else:
+                                if st.button("Fetch Context via Mem0", key=f"fetch_btn_{sheet_row}_{index}"):
+                                    with st.spinner("Searching student memories..."):
+                                        mem_response = search_memory(query=reason, user_id=student_id)
+                                        facts = []
+                                        
+                                        if isinstance(mem_response, dict) and mem_response.get("status") == "success":
+                                            # Safely extract results whether it's a list directly or nested in a dict
+                                            raw_results_data = mem_response.get("results", [])
+                                            
+                                            if isinstance(raw_results_data, dict):
+                                                raw_results = raw_results_data.get("results", [])
+                                            else:
+                                                raw_results = raw_results_data
+
+                                            for item in raw_results:
+                                                if isinstance(item, dict):
+                                                    memory_text = item.get("memory", "").strip()
+                                                    if memory_text:
+                                                        facts.append(memory_text)
+                                            
+                                            # Build the final summary string based on gathered facts
+                                            if facts:
+                                                summary_text = "\n".join([f"- {f}" for f in facts])
+                                            else:
+                                                summary_text = "*No prior relevant memory found for this specific issue.*"
+                                                
+                                            # Save to state and rerun to update the expander UI
+                                            st.session_state.student_contexts[context_key] = summary_text
+                                            st.rerun()
+                                        
+                                        else:
+                                            summary_text = f"*Error fetching memory:* {mem_response.get('msg', 'Unknown error')}"
+                                            st.session_state.student_contexts[context_key] = summary_text
+                                            st.rerun()
+                        # ----------------------------------
+
                     with btn_col:
                         st.write("") 
                         st.button(

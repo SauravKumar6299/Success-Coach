@@ -19,6 +19,7 @@ from tools.query_rag import query_rag_system
 from tools.memory import add_memory
 from tools.memory import get_memory
 from tools.add_to_signal import add_to_signal
+from tools.add_to_calender import add_to_calendar
 
 # Load environment variables from .env file
 load_dotenv()
@@ -92,6 +93,7 @@ def run_background_triage(student_id, student_message):
                 ai_extracted_data.pop("needs_intervention", None)
                 
                 add_to_signal(student_id, ai_extracted_data)
+                add_to_calendar(student_id, ai_extracted_data)
                      
                 print(f"--> [COACH QUEUE ESCALATION] Student {student_id} flagged for: {triggers}")
             else:

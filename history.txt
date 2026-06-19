@@ -1498,5 +1498,53 @@
                 "content": "No specific personal preferences are logged for you yet.\n\nWhat I do have is your study-support profile:\n- I should keep responses concise, clear, and well-formatted\n- I should be encouraging, but strict about academic integrity\n- I should help only with program-related questions\n- I should not write complete assignments for you\n\nIf you want, I can also help you set study preferences for future chats."
             }
         ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781870032",
+        "title": "Active Conversation",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1781877378",
+        "title": "i am doomed ...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i am doomed "
+            },
+            {
+                "role": "assistant",
+                "content": "You\u2019re not doomed, Priya \u2014 you\u2019re overwhelmed.\n\nLet\u2019s keep it simple:\n1. Tell me the exact topic/problem that is troubling you.\n2. I\u2019ll break it into small steps.\n3. If needed, I can help you draft a polite message to your teacher too.\n\nIf you want, send me:\n- the subject/topic\n- what you understood\n- where you got stuck\n\nI\u2019ll help you from there."
+            },
+            {
+                "role": "user",
+                "content": "i can't take it anymore , "
+            },
+            {
+                "role": "assistant",
+                "content": "Priya, I\u2019m really sorry you\u2019re feeling this way.\n\nIf you might hurt yourself or feel unsafe **right now**, please do this immediately:\n1. **Call emergency services now** or go to the nearest emergency room.\n2. **Reach out to a trusted person right now** \u2014 a family member, friend, roommate, or neighbor \u2014 and tell them:  \n   **\u201cI\u2019m not safe being alone. Please stay with me.\u201d**\n3. **Move away from anything you could use to hurt yourself** (sharp objects, ropes, pills, cords).\n\nIf you\u2019re in the **U.S. or Canada**, call or text **988** now.  \nIf you\u2019re elsewhere, tell me your country and I\u2019ll help find the right crisis line immediately.\n\nReply with just one word if you can:\n- **\u201csafe\u201d** if you are safe right now\n- **\u201cunsafe\u201d** if you might act on these feelings\n\nI\u2019m here with you."
+            },
+            {
+                "role": "user",
+                "content": "i am done with all this"
+            },
+            {
+                "role": "assistant",
+                "content": "Priya, I\u2019m sorry you\u2019re hurting this much. I can\u2019t help with anything that could put you at risk.\n\nPlease do this **now**:\n- **Call emergency services now** if you might act on these feelings.\n- **Text/call a trusted person**: \u201cI\u2019m not okay and I need you with me.\u201d\n- **Move to a place with other people** and away from anything you could use to hurt yourself.\n\nIf you\u2019re in the **U.S./Canada**, call or text **988** right now.  \nIf elsewhere, tell me your **country** and I\u2019ll give you the correct crisis number.\n\nReply with:\n- **safe** if you can stay safe for the next 10 minutes\n- **unsafe** if you cannot\n\nIf you can, also tell me: **Are you alone right now?**"
+            }
+        ]
     }
 ]
