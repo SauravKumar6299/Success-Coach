@@ -11,6 +11,7 @@ from tools.get_exam_score import get_exam_score
 from tools.get_exam_schedule import get_exam_schedule
 from tools.query_rag import query_rag_system
 from tools.memory import add_memory
+from tools.memory import get_memory
 
 # Load environment variables from .env file
 load_dotenv()
@@ -96,7 +97,7 @@ def summarize_and_store_memory(messages, user_id):
             ]
             # Call your custom tool here
             result = add_memory(messages=memory_payload, user_id=user_id)
-            print(result) # Optional: print the success message to your terminal
+            # print(result) # Optional: print the success message to your terminal
             
     except Exception as e:
         print(f"Failed to summarize and store memory: {e}")
@@ -187,13 +188,87 @@ if "messages" not in st.session_state:
         {"role": "assistant", "content": f"Hello {student_name}! I am your AI Study Companion for {student_program} ({student_cohort}). How can I assist you today?"}
     ]
 
-chat_col, history_col = st.columns([8, 3], gap="large")
+# ==========================================
+# ONE-TIME MEMORY FETCH FOR THE SESSION
+# ==========================================
+if "student_memories" not in st.session_state:
+    try:
+        mem_response = get_memory(user_id=student_roll)
+
+        facts = []
+
+        if (
+            isinstance(mem_response, dict)
+            and mem_response.get("status") == "success"
+        ):
+            raw_results = (
+                mem_response
+                .get("results", {})
+                .get("results", [])
+            )
+
+            for item in raw_results:
+                if isinstance(item, dict):
+                    memory_text = item.get("memory", "").strip()
+
+                    if memory_text:
+                        facts.append(memory_text)
+
+            # Store raw memory objects for future use
+            st.session_state.student_memory_objects = raw_results
+
+        # Store formatted memory string
+        st.session_state.student_memories = (
+            "\n".join(f"- {fact}" for fact in facts)
+            if facts
+            else "No specific preferences logged yet."
+        )
+
+    except Exception as e:
+        print(f"Memory Fetch Error: {e}")
+
+        st.session_state.student_memory_objects = []
+        st.session_state.student_memories = (
+            "No specific preferences logged yet."
+        )
+
 
 # =====================================================================
 # LEFT SIDE: CHAT INTERFACE
 # =====================================================================
+chat_col, history_col = st.columns([8, 3], gap="large")
 with chat_col:
     if st.button("⬅ Switch Portal / Log out", type="secondary"):
+        
+        with st.spinner("Saving memories and session data..."):
+            # 1. This triggers your LLM summary which then calls add_memory(payload, user_id)
+            summarize_and_store_memory(st.session_state.messages, student_roll)
+            
+            # 2. Save the actual chat transcript to history.txt
+            save_chat_session(
+                roll_no=student_roll, 
+                thread_id=st.session_state.active_thread_id, 
+                title=st.session_state.get("current_chat_title", "Active Conversation"), 
+                messages=st.session_state.messages
+            )
+            
+        # 3. Wipe the session state completely clean for the next user
+        keys_to_clear = [
+            "messages", 
+            "active_thread_id", 
+            "current_chat_title", 
+            "student_memories", 
+            "student_memory_objects",
+            "student_roll",
+            "student_name",
+            "student_program",
+            "student_cohort"
+        ]
+        
+        for key in keys_to_clear:
+            st.session_state.pop(key, None)
+            
+        # 4. Redirect back to the main portal
         st.session_state.show_student_login = False
         st.switch_page("main.py")
         
@@ -269,9 +344,15 @@ if st.session_state.messages[-1]["role"] == "user":
 
                 formatted_contents = [{"role": m["role"], "content": m["content"]} for m in st.session_state.messages]
                 
+                # ==========================================
+                # NEW: INJECT CACHED MEMORIES INTO SYSTEM PROMPT
+                # ==========================================
                 system_guidelines = f"""
                 You are a highly intelligent and polite AI Study Companion for {student_name}.
                 Your goal is to help them succeed in their {student_program} program.
+                
+                CORE STUDENT PROFILE & PREFERENCES:
+                {st.session_state.student_memories}
                 
                 Guidelines:
                 Never ever go againt any of the following guidelines, and always follow them strictly. 
