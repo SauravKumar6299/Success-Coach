@@ -1,7 +1,43 @@
 import streamlit as st
 import time
+import pandas as pd
+import os
+from dotenv import load_dotenv
+from requests.exceptions import ConnectionError
+
+from tools.get_sheets_client import get_sheets_client
 
 st.set_page_config(page_title="Coach Console", page_icon="🧠", layout="wide")
+
+def fetch_student_data(max_retries=3):
+    """Fetches data from the spreadsheet with automatic retries for network drops."""
+    for attempt in range(max_retries):
+        try:
+            sheet = get_sheets_client().open_by_key(os.getenv("GOOGLE_SHEET_ID")).worksheet("signal_sheet")
+            records = sheet.get_all_records()
+            df = pd.DataFrame(records)
+            if not df.empty:
+                df['Sheet_Row'] = df.index + 2  # Keep track of actual row number (header is row 1)
+            return df
+        except ConnectionError:
+            if attempt < max_retries - 1:
+                time.sleep(2)
+                continue
+            else:
+                st.error("⚠️ Connection to Google Sheets failed. Please try again.")
+                return pd.DataFrame()
+    
+
+def complete_task(sheet_row_index, student_id):
+    """Callback function to delete the row from Google Sheets and update session state."""
+    sheet = get_sheets_client().open_by_key(os.getenv("GOOGLE_SHEET_ID")).worksheet("signal_sheet")
+    
+    sheet.delete_rows(sheet_row_index)
+    
+    st.toast(f"Successfully removed {student_id}'s entry from the spreadsheet!", icon="✅")
+    
+    # Re-fetch the data to ensure the UI stays perfectly synced with the spreadsheet
+    st.session_state.student_data = fetch_student_data()
 
 # Custom styling for a clean, professional dashboard
 st.html(
@@ -23,6 +59,13 @@ st.html(
         font-weight: 700;
         color: #10B981;
     }
+    .student-card {
+        padding: 1rem;
+        border-radius: 8px;
+        border: 1px solid #E2E8F0;
+        margin-bottom: 0.5rem;
+        background-color: #F8FAFC;
+    }
     </style>
     """
 )
@@ -33,18 +76,12 @@ if st.button("⬅ Switch Portal / Log out", type="secondary"):
 
 st.markdown("<div class='coach-header'><h2>🧠 Coach Dashboard</h2><p style='color:#64748B;'>Manage schedules, student priorities, and daily agendas</p></div>", unsafe_allow_html=True)
 
-# 1. Initialize session state variables to track if the plan has been generated
+# 1. Initialize session state variables
 if "plan_generated" not in st.session_state:
     st.session_state.plan_generated = False
 
-if "pending_tasks" not in st.session_state:
-    st.session_state.pending_tasks = [
-        "Review Alex's neural network assignment submission",
-        "Prepare slide deck for afternoon's Advanced SQL live session",
-        "Follow up with Sarah regarding her missed mock interview slot",
-        "Grade milestone projects for Cohort 4 (12 submissions pending)",
-        "Update Notion resource hub with fresh documentation links"
-    ]
+if "student_data" not in st.session_state:
+    st.session_state.student_data = pd.DataFrame()
 
 # 2. Main Generation Layout (Split into action panel and results)
 col1, col2 = st.columns([1, 2], gap="large")
@@ -55,8 +92,8 @@ with col1:
     
     # Generate Button
     if st.button("🎯 Generate Today's Plan", type="primary", use_container_width=True):
-        with st.spinner("Analyzing student metrics and assembling tasks..."):
-            time.sleep(1.2) # Simulating processing time
+        with st.spinner("Fetching student metrics from Google Sheets..."):
+            st.session_state.student_data = fetch_student_data()
             st.session_state.plan_generated = True
             st.toast("Today's routine generated perfectly!", icon="✅")
             st.rerun()
@@ -66,32 +103,59 @@ with col2:
     if st.session_state.plan_generated:
         st.subheader("Your Agenda Overview")
         
+        pending_count = len(st.session_state.student_data) if not st.session_state.student_data.empty else 0
+        
         # Simple analytic counters
         m_col1, m_col2 = st.columns(2)
         with m_col1:
-            st.markdown(f'<div class="metric-card"><div>Pending Action Tasks</div><div class="metric-value">{len(st.session_state.pending_tasks)}</div></div>', unsafe_allow_html=True)
+            st.markdown(f'<div class="metric-card"><div>Pending Students</div><div class="metric-value">{pending_count}</div></div>', unsafe_allow_html=True)
         with m_col2:
             st.markdown('<div class="metric-card"><div>Estimated Focus Time</div><div class="metric-value" style="color:#3B82F6;">4.5 Hrs</div></div>', unsafe_allow_html=True)
             
         st.write("")
-        st.write("")
-        
-        # Dropdown UI to view details of the tasks
-        # Option A: A structured Dropdown selection box
-        selected_task = st.selectbox(
-            "📋 Quick Inspect Pending Tasks:",
-            options=st.session_state.pending_tasks,
-            index=0
-        )
-        st.info(f"👉 **Active Selection Context:** {selected_task}")
-        
         st.write("---")
+        st.write("### 📋 Active Student Workflows")
         
-        # Option B: Expander dropdown checklist (often preferred for interactive tasks)
-        with st.expander("🔍 View Complete Task Breakdown Checklist", expanded=True):
-            for i, task in enumerate(st.session_state.pending_tasks):
-                st.checkbox(task, key=f"task_{i}")
+        if pending_count == 0:
+            st.success("All student tasks are complete for today! Great job.")
+        else:
+            # Iterate through the dataframe and create a custom row for each student
+            for index, row in st.session_state.student_data.iterrows():
                 
+                # Fetch exact lowercase columns from the Google Sheet
+                student_id = row.get("student_id", "Unknown ID")
+                signal_type = row.get("signal_type", "N/A")
+                severity = row.get("severity", "N/A")
+                urgency = row.get("urgency", "N/A")
+                reason = row.get("reason", "No reason provided")
+                timestamp = row.get("timestamp", "")
+                sheet_row = row.get("Sheet_Row")
+                
+                with st.container():
+                    st.markdown("<div class='student-card'>", unsafe_allow_html=True)
+                    data_col, btn_col = st.columns([5, 1]) 
+                    
+                    with data_col:
+                        # Primary info
+                        st.markdown(f"**{student_id}** | Signal Type: `{signal_type}`")
+                        
+                        # Secondary info (Severity & Urgency)
+                        st.caption(f"**Severity:** {severity} &nbsp;|&nbsp; **Urgency:** {urgency}")
+                        
+                        # Tertiary info (Reason & Timestamp)
+                        st.markdown(f"<span style='font-size: 0.9em; color: #475569;'>*Reason: {reason}*</span>", unsafe_allow_html=True)
+                        if timestamp:
+                            st.markdown(f"<div style='font-size: 0.75em; color: #94A3B8; margin-top: 4px;'>Logged: {timestamp}</div>", unsafe_allow_html=True)
+                        
+                    with btn_col:
+                        st.write("") 
+                        st.button(
+                            "Complete ✅", 
+                            key=f"btn_complete_{sheet_row}_{index}", 
+                            on_click=complete_task, 
+                            args=(sheet_row, student_id),
+                            use_container_width=True
+                        )
+                    st.markdown("</div>", unsafe_allow_html=True)
     else:
-        # Placeholder view before clicking generate
         st.info("No active plan generated yet. Click 'Generate Today's Plan' on the left to review your pending items.")

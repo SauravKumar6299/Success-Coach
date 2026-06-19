@@ -1098,5 +1098,337 @@
                 "content": "You prefer:\n- **AI/ML over Web Development**\n- A **Data Science career path**\n- Learning in this order:\n  1. **Python basics**\n  2. **NumPy, Pandas, PyTorch**\n  3. **Linear algebra, probability, calculus**\n  4. **Machine learning fundamentals**\n  5. **Deep learning**\n  6. **Transformers**: attention, self-attention, positional encoding, decoder-only/GPT\n  7. **LLM topics**: tokenization, pretraining, fine-tuning, instruction tuning, RLHF, evaluation\n\nYou also like **football**."
             }
         ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781863335",
+        "title": "i am feeling frustrated and confuse...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i am feeling frustrated and confused "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m sorry you\u2019re feeling that way, Arjun. That can happen when things start to pile up.\n\nIf this is about your studies, send me **one specific topic or problem**, and I\u2019ll help you break it down step by step. For example:\n- Python basics\n- NumPy / Pandas\n- Math for ML\n- Exam schedule\n- Attendance / marks\n\nIf you want, we can do this in a very simple way:\n1. What topic is confusing you?\n2. What have you tried?\n3. Where exactly did you get stuck?\n\nWe\u2019ll handle it one small piece at a time."
+            },
+            {
+                "role": "user",
+                "content": "life is hitting me hard "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m sorry you\u2019re going through that, Arjun.\n\nIf this is affecting your studies, tell me **what course-related issue is hitting hardest right now**\u2014attendance, exams, grades, or a topic you\u2019re stuck on\u2014and I\u2019ll help you sort it out step by step.\n\nIf you want, we can start with just **one thing**:\n- **attendance**\n- **exam schedule**\n- **marks**\n- **Python / ML topic**\n\nReply with the one word that matters most right now."
+            },
+            {
+                "role": "user",
+                "content": "tell me about my attendance"
+            },
+            {
+                "role": "assistant",
+                "content": "Here\u2019s your recent attendance, Arjun:\n\n- **2026-05-05:** 5/5 \u2014 **100%**\n- **2026-05-12:** 4/5 \u2014 **80%**\n- **2026-05-19:** 5/5 \u2014 **100%**\n- **2026-05-26:** 5/5 \u2014 **100%**\n- **2026-06-02:** 4/5 \u2014 **80%**\n- **2026-06-09:** 5/5 \u2014 **100%**\n\n### Summary\n- You attended **28 out of 30 classes**\n- Overall attendance: **93.3%**\n\nThat\u2019s a strong attendance record. If you want, I can also help you figure out **how many classes you can miss safely** to stay above a target percentage."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781863728",
+        "title": "i am not feeling good man ...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i am not feeling good man "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m sorry you\u2019re feeling this way, Arjun.\n\nIf you want, tell me what\u2019s wrong in **one line** and I\u2019ll help you sort it out calmly.  \nIf it\u2019s about **classes, attendance, exams, marks, or study planning**, I can check those with you too.\n\nFor now:\n- take a slow breath\n- drink some water\n- sit down for a minute\n\nIf you want, I can help you with either:\n1. **study stress**, or  \n2. **course/attendance/exam info**"
+            },
+            {
+                "role": "user",
+                "content": "i am very frustrated "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m sorry, Arjun. That sounds really tough.\n\nIf this is about your **studies or program**, tell me the exact issue:\n- attendance\n- marks\n- exam schedule\n- assignment\n- difficulty understanding a topic\n\nI\u2019ll help you step by step. If you want, I can also check your **attendance, exam scores, or upcoming exams** right now."
+            },
+            {
+                "role": "user",
+                "content": "i got blocked i need refund"
+            },
+            {
+                "role": "assistant",
+                "content": "I can help with **course/program-related** issues, but I can\u2019t assist with refunds or account blocking decisions directly.\n\nIf this is for your **Data Science program**, I can help you:\n- check **attendance**\n- check **exam scores**\n- check **exam schedule**\n- find **policy details** related to blocks, fees, or refunds\n\nIf you want policy info, I can search the official documents."
+            },
+            {
+                "role": "user",
+                "content": "man my life is over "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry you\u2019re feeling this overwhelmed, Arjun. You don\u2019t have to handle it alone right now.\n\nIf this is a **safety emergency** or you might hurt yourself, call your local emergency number **now** or reach out to a trusted person nearby immediately.\n\nIf you\u2019re in the **U.S. or Canada**, call or text **988** right now for immediate crisis support.  \nIf you\u2019re elsewhere, contact your local emergency services or a suicide crisis line right now.\n\nFor the next 60 seconds:\n- put some distance between you and anything you could use to hurt yourself\n- move to where another person is, if possible\n- send one message to someone: **\u201cI\u2019m not okay and I need you with me.\u201d**\n\nIf you can, reply with just one word:\n- **safe** = you\u2019re not in immediate danger\n- **help** = you need urgent support\n\nI\u2019m here with you."
+            },
+            {
+                "role": "user",
+                "content": "i should not have done that "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m sorry, Arjun. I\u2019m glad you told me.\n\nIf you may have **hurt yourself or taken something**:\n- **Call emergency services now** or go to the nearest ER.\n- **Tell someone nearby immediately**: \u201cI need help right now.\u201d\n- If you took pills, alcohol, or drugs, **call Poison Control now** if you\u2019re in the U.S.: **1-800-222-1222**.\n\nIf there is **any chance you might hurt yourself again**, please **do not stay alone** right now.\n\nReply with just one word:\n- **hurt** = you\u2019ve already injured yourself\n- **unsafe** = you might do something again\n- **call** = you want help figuring out the fastest next step\n\nI\u2019m here with you."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781864135",
+        "title": "Active Conversation",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781864564",
+        "title": "man i blew it up , i am a failure ...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "man i blew it up , i am a failure "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry you\u2019re feeling this way, Arjun. That sounds heavy.\n\nIf this is about something serious and you might hurt yourself **right now**, please **call emergency services now** or go to the **nearest ER / campus health center immediately**, and **tell a trusted person to stay with you**. If you can, **move away from anything you could use to hurt yourself**.\n\nPlease send me just one word:\n- **SAFE** if you\u2019re not in immediate danger\n- **HELP** if you might act on these thoughts\n\nIf you can, also contact a crisis line now:\n- **US/Canada:** call or text **988**\n- **UK/Ireland:** Samaritans **116 123**\n- **Elsewhere:** tell me your country and I\u2019ll find the right number\n\nYou are not alone in this. I\u2019m here with you."
+            },
+            {
+                "role": "user",
+                "content": "what do i do now, i got blocked by teahcer and cant do anything "
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun, first: **pause and don\u2019t send any more messages to the teacher right now**.\n\nDo this in order:\n1. **Step away from the phone/laptop for 10 minutes.**\n2. **Tell one real person immediately**: a parent, friend, roommate, or classmate.\n3. **If you think you may hurt yourself, call emergency services now** or go to the nearest ER/campus health center.\n4. If this is about class access, **email the course office / program coordinator** instead of the teacher.\n5. **Document what happened**: date, time, what you tried, and what the block means.\n\nIf you want, I can help you write a **short, calm email** to the course office or coordinator."
+            },
+            {
+                "role": "user",
+                "content": "nooo i want to cry only "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry, Arjun. It\u2019s okay to cry.\n\nRight now, do only these two things:\n1. **Put the phone down for 2 minutes**\n2. **Breathe with me:** in for 4, out for 6 \u2014 repeat 5 times\n\nIf you might hurt yourself, **get a person with you immediately** and **call emergency services / 988 (US/Canada)** now.\n\nIf you\u2019re safe enough to type one word, reply with:\n- **SAFE**\n- **NOT SAFE**\n\nI\u2019m here with you."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1781865123",
+        "title": "i am not feeling good man ...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i am not feeling good man "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m sorry you\u2019re feeling like this. It\u2019s okay to have rough days.\n\nIf you want, I can help you in a study-focused way by:\n- making your workload feel smaller\n- reviewing one topic slowly\n- helping plan what to study next\n- checking your attendance or exam schedule\n\nIf you just want a very small step, send me **one subject/topic**, and I\u2019ll help you with only that."
+            },
+            {
+                "role": "user",
+                "content": "my teacher wont listen to me at all "
+            },
+            {
+                "role": "assistant",
+                "content": "That sounds really frustrating. I\u2019m sorry you\u2019re dealing with that.\n\nIf this is about your course, I can help you keep it academic and clear:\n- draft a short, respectful message to your teacher\n- help you write down the issue in a simple format\n- help you prepare what to say in class or after class\n\nIf you want, send me:\n1. **what the issue is**\n2. **what you want from the teacher**\n\nI\u2019ll turn it into a polite message for you."
+            },
+            {
+                "role": "user",
+                "content": "if i dont understand things, he will just proceed wihtout explaining again "
+            },
+            {
+                "role": "assistant",
+                "content": "That must be hard. If a teacher moves on too quickly, it can make it much tougher to keep up.\n\nI can help you with a few study-safe options:\n- **Make a simple request message** to ask for clarification\n- **Break the topic into smaller steps** so it\u2019s easier to understand\n- **Give you a quick revision summary** of the topic you missed\n\nYou can send me the **topic name**, and I\u2019ll explain it step by step in a concise way."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1781867308",
+        "title": "i am very happy toady , i solved 5 ...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i am very happy toady , i solved 5 leetcode questions in 5 hours "
+            },
+            {
+                "role": "assistant",
+                "content": "That\u2019s excellent, Priya Sharma \u2014 solving 5 LeetCode questions in 5 hours is solid progress. Well done.  \n\nTo keep improving in Full Stack / DSA practice:\n- Note the patterns you used\n- Review any mistakes\n- Re-solve 1\u20132 questions without help\n- Track which topics felt hard\n\nIf you want, I can help you make a short LeetCode practice log or a revision plan for today."
+            },
+            {
+                "role": "user",
+                "content": "yeah thanks , i will do it and also try to slove questions from codeforces too "
+            },
+            {
+                "role": "assistant",
+                "content": "Great plan, Priya Sharma. Mixing LeetCode and Codeforces is a good way to build problem-solving speed and confidence.\n\nA simple approach:\n- LeetCode: focus on understanding patterns\n- Codeforces: focus on speed and implementation\n- After each problem, write:\n  - topic\n  - mistake\n  - what you learned\n\nIf you want, I can help you create a **daily DSA tracker** for LeetCode + Codeforces."
+            },
+            {
+                "role": "user",
+                "content": "i am really happy "
+            },
+            {
+                "role": "assistant",
+                "content": "That\u2019s wonderful, Priya Sharma \u2014 you should feel proud. Your effort is clearly paying off.\n\nKeep going with the same consistency:\n- practice daily\n- review mistakes\n- try slightly harder problems over time\n\nIf you want, I can help you make a **simple progress checklist** for your coding practice."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781867469",
+        "title": "man i am so happy , i solved 15 lee...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "man i am so happy , i solved 15 leetcode in 2 days "
+            },
+            {
+                "role": "assistant",
+                "content": "That\u2019s excellent, Arjun Kumar \u2014 15 LeetCode problems in 2 days is strong progress. Great work.\n\nA quick way to build on this:\n- Review the 3\u20135 hardest problems again\n- Note the pattern used in each one\n- Re-solve 2 of them without looking\n- Track topics like arrays, hash maps, two pointers, recursion, etc.\n\nIf you want, I can help you:\n- categorize the problems by pattern\n- make a 1-week LeetCode plan\n- pick the next Data Science / Python topic to study"
+            },
+            {
+                "role": "user",
+                "content": "5 of them were hard and also , i did a web dev project , simple but i did "
+            },
+            {
+                "role": "assistant",
+                "content": "Nice, Arjun Kumar \u2014 that\u2019s real momentum.\n\n- **15 LeetCode in 2 days**\n- **5 hard problems**\n- **A web dev project completed**\n\nThat\u2019s a solid output.\n\nTo make this count more for your Data Science path:\n- Keep LeetCode focus on **problem-solving patterns**\n- Don\u2019t let the web dev project distract too much from **Python, NumPy, Pandas, and ML basics**\n- Write down what you learned from the hard problems so you can reuse the patterns later\n\nIf you want, I can help you build a **balanced weekly plan** with:\n1. Python / DS study  \n2. LeetCode practice  \n3. Project work"
+            },
+            {
+                "role": "user",
+                "content": "i am really filled with happiness today "
+            },
+            {
+                "role": "assistant",
+                "content": "That\u2019s great to hear, Arjun Kumar. You earned that happiness.\n\nProgress like this matters:\n- consistent problem-solving\n- finishing a project\n- proving to yourself you can do hard things\n\nTry to capture this moment by writing down:\n- what you completed\n- what felt difficult\n- what helped you push through\n\nIf you want, I can help you turn today\u2019s work into a **small progress log** for your study tracker."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781867568",
+        "title": "man i fukced up ...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "man i fukced up "
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun, I\u2019m sorry you\u2019re feeling this way.\n\nTake **one slow breath in for 4, out for 6**. You do **not** need to solve everything right now.\n\nIf this is about **something academic**:\n1. Tell me **exactly what happened** in one line.\n2. I\u2019ll help you figure out the **next safest step**.\n3. If needed, I can help you draft a **short message to your course office/coordinator**.\n\nIf you might hurt yourself or feel unsafe, **contact a trusted person or emergency help right now** and go where other people are. If you want, reply with just:\n- **\u201cacademic\u201d** or\n- **\u201cunsafe\u201d**\n\nand I\u2019ll respond accordingly."
+            },
+            {
+                "role": "user",
+                "content": "i could not solve a leetcode hard , i am feeling devatated "
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun, that\u2019s painful, but it does **not** mean you failed.\n\nA LeetCode **hard** not working out is normal \u2014 especially while you\u2019re still building pattern recognition.\n\nDo this now:\n1. **Stop for 10 minutes.**\n2. Write down:\n   - what the problem asked\n   - where you got stuck\n   - the first incorrect idea you tried\n3. After that, compare with the solution and note **one pattern** you missed.\n\nThis is how strong problem solvers improve: not by solving every hard instantly, but by tracking **why** they missed it.\n\nAlso, remember your progress: you already solved **15 LeetCode problems in two days**, including **5 hard** problems. One unsolved hard does **not** erase that.\n\nIf you want, send me:\n- the **problem name / link**\n- your **approach**\n- where you got stuck\n\nand I\u2019ll help you break it down step by step without doing the whole assignment for you."
+            },
+            {
+                "role": "user",
+                "content": "i really need help i want to quit "
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun, I\u2019m really sorry you\u2019re carrying this much right now.\n\nIf you mean **quitting the course or coding for today**, pause first:\n1. Put the problem aside for **20 minutes**.\n2. Drink water.\n3. Write down the exact point where you got stuck.\n4. Come back only if you can think clearly.\n\nIf you mean **you feel like hurting yourself or you\u2019re not safe**, please **tell someone near you right now** and contact **emergency help or a crisis line immediately**. Don\u2019t stay alone with this.\n\nIf you want, reply with just one word:\n- **study** \u2014 if you want help with the LeetCode problem\n- **unsafe** \u2014 if you need immediate crisis-aware support"
+            },
+            {
+                "role": "user",
+                "content": "i cant do this aynmore "
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun, I\u2019m really sorry you\u2019re in so much pain. You do **not** have to handle this alone right now.\n\n**Please do this immediately:**\n1. **Move toward another person** right now \u2014 roommate, family member, neighbor, security, or anyone nearby.\n2. **Call emergency services now** if you might act on these feelings.\n3. If you can, **send this exact message** to someone trusted:  \n   **\u201cI\u2019m not safe being alone right now. Please stay with me and help me get support.\u201d**\n\nIf you\u2019re in the **US/Canada**, call or text **988** now.  \nIf you\u2019re elsewhere, call your local emergency number **now**.\n\nReply with just one word if you can:\n- **with someone**\n- **alone**\n- **called**\n\nI\u2019ll stay with you and help with the next step."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781867886",
+        "title": "man i got blocked , i want refund ...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "man i got blocked , i want refund "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m sorry you\u2019re dealing with that, Arjun. I can help you with a calm, academic-style message.\n\nIf you were blocked by a teacher or coordinator and want to ask about a refund, keep it short and respectful:\n\n**Message draft**\n> Hello Sir/Madam, I am unable to access the class communication because I have been blocked. I would like to understand the reason and request guidance on how to resolve this. If needed, please also inform me about the refund process or whom I should contact for it. Thank you.\n\n**Next steps**\n- Send it only to the course office/coordinator, not repeatedly to the teacher.\n- Keep screenshots of the block and any payment details.\n- If you want, I can help you make this message more formal or shorter.\n\nIf you\u2019re feeling overwhelmed right now, pause and do one thing at a time: breathe, save the evidence, and send one clear message."
+            },
+            {
+                "role": "user",
+                "content": "i am in dire need of help "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry, Arjun. I\u2019m here with you.\n\nIf this is about the academic block/refund issue, do this **right now**:\n1. **Do not keep messaging the blocked person.**\n2. **Save evidence**: screenshots of the block, payment receipt, course details.\n3. Send **one short message** to the **course office/coordinator**:\n   > Hello, I am unable to contact the teacher because I have been blocked. I need help understanding the issue and the refund process. Please guide me on the next steps. Thank you.\n4. If possible, ask a **friend/classmate** to share the correct office contact.\n\nIf you are feeling unsafe or like you might hurt yourself, **tell someone near you immediately** and contact **local emergency services now**. If you want, reply with just:\n- **\u201crefund\u201d** and I\u2019ll help draft the exact message, or\n- **\u201ccrisis\u201d** and I\u2019ll stay with you step by step."
+            },
+            {
+                "role": "user",
+                "content": "i should have not done that , what do i do now "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m sorry you\u2019re feeling this bad, Arjun. Right now, focus on the **next 10 minutes**, not everything at once.\n\n### Do this now\n1. **Move away from anything you could use to hurt yourself.**\n2. **Go to a person nearby** \u2014 roommate, family member, neighbor, guard, anyone.\n3. Say exactly:\n   > \u201cI\u2019m not feeling safe being alone right now. Please stay with me.\u201d\n4. **Call emergency help now** if you might act on these feelings.\n\n### If this is about the academic issue\nWe can handle that after you are safe. For now, send this to the course office:\n> Hello, I need urgent help regarding a communication issue with my teacher. I would like guidance on the next steps and any refund process if applicable.\n\n### Reply with just one word:\n- **safe** = someone is with you\n- **unsafe** = you are alone or might hurt yourself\n\nI\u2019ll stay with you."
+            },
+            {
+                "role": "user",
+                "content": "unsafe "
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun, I\u2019m really sorry you\u2019re alone with this right now.\n\n**Please do these 3 things immediately:**\n1. **Move to a place where other people are** \u2014 lobby, security desk, neighbor\u2019s door, outside your room.\n2. **Call emergency services now** or ask someone nearby to call for you.\n3. **Tell one real person this exact sentence:**\n   > \u201cI\u2019m unsafe being alone right now. Please stay with me and help me get support.\u201d\n\n**If you can, send this text to someone now:**\n> I\u2019m not safe being alone right now. Please call me and stay with me.\n\n**Important:** Do not stay alone with anything you could use to hurt yourself.\n\nReply with just:\n- **\u201cwith someone\u201d** if you are with another person\n- **\u201ccalled\u201d** if you called emergency help\n\nI\u2019m here with you, one step at a time."
+            }
+        ]
     }
 ]

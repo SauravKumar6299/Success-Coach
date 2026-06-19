@@ -1,9 +1,15 @@
-import streamlit as st
-import datetime
 import os
+import threading
+import datetime
 import json
+
+# Prevent tokenizer parallelism warnings before loading transformers
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+import streamlit as st
 from dotenv import load_dotenv
 from openai import OpenAI
+from transformers import pipeline
 
 # Import all your updated tools
 from tools.get_attendance import get_attendance
@@ -12,9 +18,88 @@ from tools.get_exam_schedule import get_exam_schedule
 from tools.query_rag import query_rag_system
 from tools.memory import add_memory
 from tools.memory import get_memory
+from tools.add_to_signal import add_to_signal
 
 # Load environment variables from .env file
 load_dotenv()
+
+# =====================================================================
+# GLOBAL AI EMOTION TRIAGE CONFIGURATION (NON-CELERY)
+# =====================================================================
+@st.cache_resource
+def load_triage_model():
+    """Loads the 28-emotion model once and keeps it cached in RAM."""
+    return pipeline(
+        "text-classification", 
+        model="SamLowe/roberta-base-go_emotions", 
+        top_k=None 
+    )
+
+try:
+    emotion_classifier = load_triage_model()
+except Exception as e:
+    print(f"Failed to load emotion model: {e}")
+    emotion_classifier = None
+
+import json
+
+def run_background_triage(student_id, student_message):
+    """Analyzes text in a background thread and updates the coach queue."""
+    if not emotion_classifier:
+        return
+    try:
+        results = emotion_classifier(student_message)[0]
+        
+        # Define urgent emotions and filter results
+        urgent_emotions = {'anger', 'fear', 'grief', 'nervousness', 'sadness', 'remorse', 'disappointment', 'embarrassment'}
+        triggers = [e['label'] for e in results if e['score'] > 0.50 and e['label'] in urgent_emotions]
+        
+        if triggers:
+            # Ask the LLM to decide IF intervention is needed, and extract data if it is.
+            extraction_prompt = f"""
+            Analyze the following student message and their detected emotions to triage for a human coach.
+            Message: "{student_message}"
+            Emotions Detected: {triggers}
+            
+            First, evaluate if this genuinely requires human coach intervention. Minor venting, typical study fatigue, or passing nervousness might not need escalation. However, severe distress, academic blockers, or explicit requests for help DO need a human coach.
+            
+            Return ONLY a JSON object with these exact keys:
+            - "needs_intervention" (boolean: true or false)
+            - "signal_type" (e.g., Academic Stress, Personal Crisis, Frustration - or "N/A" if false)
+            - "severity" (Low, Medium, High, Critical - or "N/A" if false)
+            - "urgency" (Immediate, Next 24 hours, Routine - or "N/A" if false)
+            - "reason" (A concise 1-sentence explanation of why they need help - or "N/A" if false)
+            - "timestamp" (The current timestamp)
+            """
+            
+            response = client.chat.completions.create(
+                model="gpt-5.4-mini-2026-03-17",
+                messages=[{"role": "user", "content": extraction_prompt}],
+                response_format={"type": "json_object"}
+            )
+            
+            ai_extracted_data = json.loads(response.choices[0].message.content)
+            
+            # Check the LLM's decision before adding to the spreadsheet
+            if ai_extracted_data.get("needs_intervention", False):
+                
+                # Append standard tracking data
+                ai_extracted_data["student_id"] = student_id
+                ai_extracted_data["triggers"] = triggers
+                
+                # Clean up the JSON by removing the internal flag before saving to your DB/Sheets
+                # (Optional: remove this line if you want to store the true/false flag in your sheet)
+                ai_extracted_data.pop("needs_intervention", None)
+                
+                add_to_signal(student_id, ai_extracted_data)
+                     
+                print(f"--> [COACH QUEUE ESCALATION] Student {student_id} flagged for: {triggers}")
+            else:
+                print(f"--> [TRIAGE RESOLVED] Student {student_id} showed {triggers}, but LLM deemed no coach intervention necessary.")
+                
+    except Exception as e:
+        print(f"Triage background thread error: {e}")
+
 
 # Guard clause: Redirect back to login if name/roll missing
 if "student_roll" not in st.session_state or "student_name" not in st.session_state:
@@ -290,6 +375,23 @@ with chat_col:
         st.session_state.current_chat_title = current_title
         save_chat_session(student_roll, st.session_state.active_thread_id, current_title, st.session_state.messages)
         st.rerun()
+
+# =====================================================================
+# BACKGROUND EMOTION TRIAGE PROCESSOR
+# =====================================================================
+if st.session_state.messages[-1]["role"] == "user":
+    current_msg_count = len(st.session_state.messages)
+    # Validate against session index so the thread fires exactly once per user input
+    if st.session_state.get("last_triaged_index", -1) < current_msg_count:
+        st.session_state.last_triaged_index = current_msg_count
+        latest_text = st.session_state.messages[-1]["content"]
+        
+        # Fire off a non-blocking thread to classify feelings while LLM thinks
+        triage_worker = threading.Thread(
+            target=run_background_triage, 
+            args=(student_roll, latest_text)
+        )
+        triage_worker.start()
 
 # =====================================================================
 # OPENAI CHAT COMPLETION WITH FUNCTION CALLING (TOOLS)

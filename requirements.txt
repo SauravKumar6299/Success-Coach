@@ -8,3 +8,7 @@ protobuf==3.20.3
 mem0ai
 langchain
 langchain_openai
+transformers
+torchview 
+torchvison
+torch
