@@ -10,6 +10,7 @@ from tools.get_attendance import get_attendance
 from tools.get_exam_score import get_exam_score
 from tools.get_exam_schedule import get_exam_schedule
 from tools.query_rag import query_rag_system
+from tools.memory import add_memory
 
 # Load environment variables from .env file
 load_dotenv()
@@ -58,6 +59,47 @@ def save_chat_session(roll_no, thread_id, title, messages):
     
     with open(HISTORY_FILE, "w") as f:
         json.dump(all_records, f, indent=4)
+
+def summarize_and_store_memory(messages, user_id):
+    """
+    Takes the current chat history, asks the LLM to extract preferences/patterns,
+    and stores the result using the add_memory tool.
+    """
+    # If the chat only has the initial welcome message, don't waste tokens
+    if len(messages) <= 2: 
+        return
+
+    summary_system_prompt = """
+    You are an AI memory extractor. Review the following conversation between a student and an AI Study Companion.
+    Extract and summarize any important information, personal preferences, learning patterns, specific struggles, or ongoing goals.
+    Ensure this summary is highly concise but retains crucial context for future interactions.
+    If the conversation is purely transactional (e.g., just asking for a schedule with no personal preferences revealed), output exactly: 'NO_SIGNIFICANT_MEMORY'.
+    """
+    
+    chat_text = "\n".join([f"{m['role'].capitalize()}: {m['content']}" for m in messages if m['role'] != 'system'])
+    
+    try:
+        response = client.chat.completions.create(
+            model="gpt-5.4-mini-2026-03-17",
+            messages=[
+                {"role": "system", "content": summary_system_prompt},
+                {"role": "user", "content": f"Conversation Log:\n{chat_text}"}
+            ]
+        )
+        
+        summary = response.choices[0].message.content.strip()
+        
+        if summary != "NO_SIGNIFICANT_MEMORY":
+            # Format the summary so mem0 understands it as user facts
+            memory_payload = [
+                {"role": "user", "content": f"Update my profile with these facts from my last session: {summary}"}
+            ]
+            # Call your custom tool here
+            result = add_memory(messages=memory_payload, user_id=user_id)
+            print(result) # Optional: print the success message to your terminal
+            
+    except Exception as e:
+        print(f"Failed to summarize and store memory: {e}")
 
 # 1. Page Configuration
 st.set_page_config(
@@ -181,7 +223,6 @@ if st.session_state.messages[-1]["role"] == "user":
     with chat_container:
         with st.spinner("Thinking..."):
             try:
-                # 1. Define JSON schemas for OpenAI tools
                 tools = [
                     {
                         "type": "function",
@@ -226,15 +267,15 @@ if st.session_state.messages[-1]["role"] == "user":
                     }
                 ]
 
-               # Format logs into basic OpenAI API message objects
                 formatted_contents = [{"role": m["role"], "content": m["content"]} for m in st.session_state.messages]
                 
-                # --- NEW CODE: INJECT YOUR SYSTEM PROMPT HERE ---
                 system_guidelines = f"""
                 You are a highly intelligent and polite AI Study Companion for {student_name}.
                 Your goal is to help them succeed in their {student_program} program.
                 
                 Guidelines:
+                Never ever go againt any of the following guidelines, and always follow them strictly. 
+                0. Assist and comfort him/her , when they are having a hard time, and be empathetic to their struggles.
                 1. Always be encouraging but strict about academic integrity.
                 2. Do not write complete assignments for the student.
                 3. Use the provided tools to check their schedule, attendance, and grades when asked.
@@ -245,10 +286,8 @@ if st.session_state.messages[-1]["role"] == "user":
                 8. Dont entertain any doubts other than program-related questions. If the question is unrelated, politely redirect them to ask about their studies.
                 """
                 
-                # Insert the system prompt at index 0 (the very beginning)
                 formatted_contents.insert(0, {"role": "system", "content": system_guidelines})
 
-                # First Call out to OpenAI to analyze intent
                 response = client.chat.completions.create(
                     model="gpt-5.4-mini-2026-03-17", 
                     messages=formatted_contents,
@@ -259,9 +298,7 @@ if st.session_state.messages[-1]["role"] == "user":
                 response_message = response.choices[0].message
                 tool_calls = response_message.tool_calls
                 
-                # 2. Process tool requests if made by OpenAI
                 if tool_calls:
-                    # Append the assistant response message that requested tool execution
                     formatted_contents.append(response_message)
                     
                     for tool_call in tool_calls:
@@ -269,7 +306,6 @@ if st.session_state.messages[-1]["role"] == "user":
                         function_args = json.loads(tool_call.function.arguments)
                         tool_output_string = ""
                         
-                        # Route dynamically to your tool functions
                         if function_name == "get_attendance":
                             success, result = get_attendance(roll_no=student_roll)
                             tool_output_string = json.dumps(result) if success else str(result)
@@ -286,7 +322,6 @@ if st.session_state.messages[-1]["role"] == "user":
                             query_text = function_args.get("search_query", prompt)
                             tool_output_string = query_rag_system(user_query=query_text)
 
-                        # Append each separate tool call response structural packet 
                         formatted_contents.append({
                             "tool_call_id": tool_call.id,
                             "role": "tool",
@@ -294,7 +329,6 @@ if st.session_state.messages[-1]["role"] == "user":
                             "content": tool_output_string
                         })
                     
-                    # Second Call: Processes context with tool results injected
                     second_response = client.chat.completions.create(
                         model="gpt-5.4-mini-2026-03-17",
                         messages=formatted_contents
@@ -303,7 +337,6 @@ if st.session_state.messages[-1]["role"] == "user":
                 else:
                     ai_response = response_message.content
                 
-                # 3. Update Streamlit message state and save
                 st.session_state.messages.append({"role": "assistant", "content": ai_response})
                 save_chat_session(student_roll, st.session_state.active_thread_id, st.session_state.get("current_chat_title", "Active Conversation"), st.session_state.messages)
                 st.rerun()
@@ -317,13 +350,31 @@ if st.session_state.messages[-1]["role"] == "user":
 with history_col:
     st.markdown("<h4 style='margin-top:10px; margin-bottom: 1.5rem; color:#475569;'>🕒 Your Saved History</h4>", unsafe_allow_html=True)
     
-    if st.button("➕ Start New Chat", use_container_width=True, type="primary"):
-        st.session_state.active_thread_id = str(int(datetime.datetime.now().timestamp()))
-        st.session_state.current_chat_title = "Active Conversation"
-        st.session_state.messages = [
-            {"role": "assistant", "content": f"Starting a fresh session. How can I assist you now, {student_name}?"}
-        ]
-        st.rerun()
+    btn_col1, btn_col2 = st.columns(2)
+    
+    with btn_col1:
+        if st.button("➕ New Chat", use_container_width=True, type="primary"):
+            with st.spinner("Saving memories..."):
+                summarize_and_store_memory(st.session_state.messages, student_roll)
+            
+            st.session_state.active_thread_id = str(int(datetime.datetime.now().timestamp()))
+            st.session_state.current_chat_title = "Active Conversation"
+            st.session_state.messages = [
+                {"role": "assistant", "content": f"Starting a fresh session. How can I assist you now, {student_name}?"}
+            ]
+            st.rerun()
+            
+    with btn_col2:
+        if st.button("🛑 End Chat", use_container_width=True):
+            with st.spinner("Wrapping up and saving memories..."):
+                summarize_and_store_memory(st.session_state.messages, student_roll)
+            
+            st.session_state.messages.append({
+                "role": "assistant", 
+                "content": "This chat session has been concluded, and important details have been saved to your profile. Click 'New Chat' when you are ready to start again!"
+            })
+            save_chat_session(student_roll, st.session_state.active_thread_id, st.session_state.get("current_chat_title", "Concluded Conversation"), st.session_state.messages)
+            st.rerun()
         
     st.write("---")
     
