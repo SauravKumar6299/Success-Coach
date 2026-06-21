@@ -53,24 +53,29 @@ def _normalize_severity(raw):
 
 def add_to_calendar(roll_no, ai_extracted_data, start_day_offset=0):
     """
-    Priority-queue rebuild of the emergency-sync schedule.
+    Priority-queue rebuild of the emergency-sync schedule, with a strict
+    one-entry-per-student invariant.
 
-    Algorithm:
-      1. Pull every event in the next WINDOW_DAYS days.
-      2. Recognized emergency syncs -> pushed into a severity max-heap and
-         deleted from the calendar (full tear-down). Non-emergency events are
-         kept only as per-day "blocked" intervals so we never double-book over
-         real appointments.
-      3. The new incoming signal is pushed into the same heap.
-      4. Pop the heap and re-pack day by day from 9 AM. Per-day capacity:
-            - up to SAME_SEVERITY_CAP (5) if the day holds a single severity,
-            - up to MIXED_SEVERITY_CAP (2) the moment two severities mix.
-         Because the heap yields highest severity first, each day starts with
-         its top severity; we keep taking that severity (up to 5), and only
-         drop to the mixed cap of 2 once a lower severity would be added.
+    Per-student rule for the incoming signal:
+      - If the student already has an entry whose severity is STRICTLY HIGHER
+        than the new one  -> do nothing at all (the calendar is left untouched).
+      - If the new severity is HIGHER OR EQUAL to the existing entry, or the
+        student has no entry -> the new signal supersedes the old one and the
+        whole schedule is rebuilt.
+
+    Rebuild:
+      1. Scan the next WINDOW_DAYS days (read-only) and classify events.
+      2. Each recognized emergency sync is collapsed to ONE entry per student
+         (highest severity wins if duplicates exist); the incoming student is
+         represented only by the new signal.
+      3. All recognized emergency events are deleted (tear-down), then the heap
+         is re-packed day by day from 9 AM with the 2-if-mixed / 5-if-same cap.
+         Real (non-emergency) appointments are preserved and treated as blocked
+         time so we never double-book over them.
 
     Returns (ok, schedule_updates) where schedule_updates maps roll_no -> start ISO.
-    Use it to rebuild your signal list (order it by the ISO timestamp).
+    In the "do nothing" case it returns (True, {}) — nothing was scheduled, so the
+    caller should NOT insert a fresh signal row for this student.
     """
     try:
         service = get_cal_service()
@@ -91,27 +96,11 @@ def add_to_calendar(roll_no, ai_extracted_data, start_day_offset=0):
             maxResults=2500
         ).execute()
 
-        # tiebreaker so heapq never has to compare the payload dicts; also gives
-        # FIFO ordering within a severity (lower counter pops first)
-        counter = itertools.count()
-        heap = []                      # entries: (-rank, seq, payload)
-        blocked_by_day = defaultdict(list)   # date -> [(start_dt, end_dt), ...]
-        to_delete = []                 # ids of recognized emergency events to remove
+        # --- scan the window (read-only): classify events ---
+        blocked_by_day = defaultdict(list)        # date -> [(start_dt, end_dt), ...]
+        existing_by_roll = defaultdict(list)      # roll_no -> [ {severity, rank, event_id, reason} ]
+        to_delete = []                            # ids of recognized emergency events
 
-        def push(payload):
-            rank = SEVERITY_RANK.get(payload['severity'], 2)
-            heapq.heappush(heap, (-rank, next(counter), payload))
-
-        # --- the new incoming signal goes into the heap too ---
-        input_severity = _normalize_severity(ai_extracted_data.get("severity"))
-        push({
-            "roll_no": roll_no,
-            "severity": input_severity,
-            "signal_type": ai_extracted_data.get("signal_type", "Urgent Review"),
-            "reason": ai_extracted_data.get("reason", "No details provided"),
-        })
-
-        # --- scan the window: emergencies -> heap+delete, others -> blocked ---
         for event in events_result.get('items', []):
             if event.get('status') == 'cancelled':
                 continue
@@ -132,17 +121,62 @@ def add_to_calendar(roll_no, ai_extracted_data, start_day_offset=0):
             match = EMERGENCY_TITLE_RE.search(summary)
 
             if match:
-                push({
-                    "roll_no": match.group(2).strip(),
-                    "severity": match.group(1).title(),
-                    "signal_type": "Retrieved Sync",
+                roll = match.group(2).strip()
+                sev = match.group(1).title()
+                existing_by_roll[roll].append({
+                    "severity": sev,
+                    "rank": SEVERITY_RANK.get(sev, 2),
+                    "event_id": event['id'],
                     "reason": event.get('description', ''),
                 })
                 to_delete.append(event['id'])
             else:
                 blocked_by_day[s_dt.date()].append((s_dt, e_dt))
 
-        # --- full tear-down of existing emergency syncs ---
+        # --- incoming signal ---
+        input_severity = _normalize_severity(ai_extracted_data.get("severity"))
+        new_rank = SEVERITY_RANK.get(input_severity, 2)
+
+        # --- one-entry-per-student decision for the incoming roll_no ---
+        prev_entries = existing_by_roll.get(roll_no, [])
+        if prev_entries:
+            prev_best = max(prev_entries, key=lambda e: e["rank"])
+            if prev_best["rank"] > new_rank:
+                # existing entry is strictly more severe -> keep it, change nothing
+                print(f"[dedupe] {roll_no}: existing {prev_best['severity']} outranks "
+                      f"new {input_severity}; no change made.")
+                return True, {}
+
+        # --- build the heap: ONE entry per student ---
+        counter = itertools.count()
+        heap = []                                 # entries: (-rank, seq, payload)
+
+        def push(payload):
+            rank = SEVERITY_RANK.get(payload['severity'], 2)
+            heapq.heappush(heap, (-rank, next(counter), payload))
+
+        # the incoming student is represented only by the new signal (it replaces
+        # any older entry, which gets deleted in the tear-down below)
+        push({
+            "roll_no": roll_no,
+            "severity": input_severity,
+            "signal_type": ai_extracted_data.get("signal_type", "Urgent Review"),
+            "reason": ai_extracted_data.get("reason", "No details provided"),
+        })
+
+        # every OTHER student: collapse any duplicates to their highest-severity entry
+        for other_roll, entries in existing_by_roll.items():
+            if other_roll == roll_no:
+                continue
+            best = max(entries, key=lambda e: e["rank"])
+            push({
+                "roll_no": other_roll,
+                "severity": best["severity"],
+                "signal_type": "Retrieved Sync",
+                "reason": best["reason"],
+            })
+
+        # --- full tear-down of existing emergency syncs (all duplicates included) ---
         for eid in to_delete:
             try:
                 service.events().delete(calendarId=CALENDAR_ID, eventId=eid).execute()
