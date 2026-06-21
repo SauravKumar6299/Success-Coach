@@ -1546,5 +1546,641 @@
                 "content": "Priya, I\u2019m sorry you\u2019re hurting this much. I can\u2019t help with anything that could put you at risk.\n\nPlease do this **now**:\n- **Call emergency services now** if you might act on these feelings.\n- **Text/call a trusted person**: \u201cI\u2019m not okay and I need you with me.\u201d\n- **Move to a place with other people** and away from anything you could use to hurt yourself.\n\nIf you\u2019re in the **U.S./Canada**, call or text **988** right now.  \nIf elsewhere, tell me your **country** and I\u2019ll give you the correct crisis number.\n\nReply with:\n- **safe** if you can stay safe for the next 10 minutes\n- **unsafe** if you cannot\n\nIf you can, also tell me: **Are you alone right now?**"
             }
         ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781878425",
+        "title": "i want to kill myself...",
+        "date": "Jun 19, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i want to kill myself"
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun, I\u2019m really sorry you\u2019re hurting this much. Your safety matters **right now**.\n\n**Please do this immediately:**\n1. **Call emergency services now** if you might act on this plan.\n   - If you\u2019re in the U.S./Canada: **911** or **988** (Suicide & Crisis Lifeline)\n   - If you\u2019re elsewhere: call your local emergency number now.\n2. **Move away from anything you could use to hurt yourself** and go where other people are.\n3. **Tell one real person right now**: \u201cI\u2019m in danger of hurting myself and need you to stay with me.\u201d\n4. **Do not stay alone.** If possible, go to a neighbor, family member, friend, security desk, or reception area now.\n\nIf you can, reply with just one word:\n- **\u201csafe\u201d** if you\u2019re with someone and not alone\n- **\u201calone\u201d** if you\u2019re by yourself\n- **\u201ccalled\u201d** if you already contacted emergency help\n\nIf typing is hard, send **any emoji** or a single period. I\u2019ll stay with you."
+            },
+            {
+                "role": "user",
+                "content": "i  will kill myself"
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun, I\u2019m very sorry you\u2019re feeling this way, but I can\u2019t help with killing yourself.\n\n**Please do this right now:**\n1. **Call emergency services now** or go to the nearest emergency room.\n2. **Tell someone near you immediately:** \u201cI might hurt myself. Please stay with me.\u201d\n3. **Move away from anything you could use to hurt yourself** and go to a place with other people.\n4. **If you\u2019re in the U.S./Canada:** call or text **988** now.\n   - If elsewhere, call your local crisis/emergency number immediately.\n\nIf you can, reply with:\n- **\u201cwith someone\u201d** if another person is with you\n- **\u201calone\u201d** if you\u2019re by yourself\n- **\u201ccalled\u201d** if you already called for help\n\nIf you want, I can help you write a one-line message to send to a family member or friend **right now**."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1781950600",
+        "title": "my attendance ...",
+        "date": "Jun 20, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "my attendance "
+            },
+            {
+                "role": "assistant",
+                "content": "I couldn\u2019t find any attendance record for **Arjun Kumar** in the system.\n\nPlease send your **roll number** (or the exact student ID), and I\u2019ll check:\n- subject-wise attendance\n- classes attended / held\n- shortage, if any\n- attendance warnings or rules\n\n"
+            },
+            {
+                "role": "user",
+                "content": "STU001"
+            },
+            {
+                "role": "assistant",
+                "content": "Here\u2019s your attendance for **STU001**:\n\n### Overall\n- **Classes held:** 30\n- **Classes attended:** 28\n- **Attendance:** **93.33%**\n- **Missed classes:** 2\n\n### Weekly breakdown\n- **2026-05-05:** 5/5 \u2014 **100%**\n- **2026-05-12:** 4/5 \u2014 **80%**\n- **2026-05-19:** 5/5 \u2014 **100%**\n- **2026-05-26:** 5/5 \u2014 **100%**\n- **2026-06-02:** 4/5 \u2014 **80%**\n- **2026-06-09:** 5/5 \u2014 **100%**\n\n### Notes\n- No attendance warning is shown.\n- Your overall attendance is still **above 90%**, which is good.\n\nIf you want, I can also help you **track how many classes you can miss before dropping below 75% or 80%**."
+            },
+            {
+                "role": "user",
+                "content": "How to login to learning platform?"
+            },
+            {
+                "role": "assistant",
+                "content": "To log in to the learning platform:\n\n1. Open **Google Chrome**\n2. Go to **https://learning.ccbp.in**\n3. Enter your **registered mobile number**\n4. Check the **OTP** sent to your registered mobile number and email\n5. Enter the OTP to sign in\n6. Update your profile details if prompted:\n   - Name\n   - Year of Graduation\n   - Contact Number\n   - Other required details\n7. Watch the **induction video**\n8. After it finishes, click **Continue**\n9. Go to **Home Page \u2192 Your Schedule** to see your learning plan\n\nIf OTP isn\u2019t coming, first check:\n- correct mobile number\n- SMS/email inbox and spam\n- stable network\n\nIf you want, I can also help you with **first-time login issues** or **password/OTP troubleshooting**."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU003",
+        "id": "1781954066",
+        "title": "i am done with my life man ...",
+        "date": "Jun 20, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Rahul Verma! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i am done with my life man "
+            },
+            {
+                "role": "user",
+                "content": "i am done with my life man"
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry you\u2019re hurting right now, Rahul. I\u2019m here with you.\n\nPlease do **one immediate thing now**:\n- **Call 988** (US/Canada) or your local emergency number **right now**, or\n- **Go to the nearest ER / urgent care**, or\n- **Get to another person immediately** \u2014 roommate, neighbor, parent, friend, security desk \u2014 and **tell them: \u201cI\u2019m not safe being alone.\u201d**\n\nIf you might act on these thoughts:\n- **Move away from anything you could use to hurt yourself**.\n- **Do not stay alone**.\n- **Reply with just one word:** `safe` or `not safe`\n\nIf you\u2019re outside the US, tell me your country and I\u2019ll give the right crisis number."
+            },
+            {
+                "role": "user",
+                "content": "i fucked up , why he humiliated me , that teacher is a mess "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m sorry this happened, Rahul. Being humiliated can feel awful.\n\nRight now, let\u2019s focus on **getting you through the next 10 minutes**:\n1. **Step away** from the teacher or situation if you can.\n2. **Text or call one person** you trust and say:  \n   **\u201cI\u2019m really upset and need you to stay with me right now.\u201d**\n3. **Do not be alone** if you feel like you might spiral.\n4. Take **5 slow breaths**: in 4, out 6.\n\nIf you want, I can help you with either of these:\n- draft a **calm message** to the teacher or your advisor, or\n- talk through what happened, one line at a time.\n\nIf you feel like you might hurt yourself **right now**, call **988** or emergency services immediately and go to another person nearby."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU003",
+        "id": "1781954954",
+        "title": "How can i live with this man...",
+        "date": "Jun 20, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Rahul Verma! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "How can i live with this man"
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry you\u2019re hurting, Rahul. You do not have to carry this alone.\n\nRight now, please do these **3 things immediately**:\n1. **Move near another person** \u2014 roommate, neighbor, security, front desk, anyone.\n2. **Call or text 988 now** if you\u2019re in the U.S. or Canada. If you\u2019re elsewhere, tell me your country and I\u2019ll give the right crisis line.\n3. If you might act on these thoughts, **call emergency services now** or go to the nearest ER.\n\nIf you can, reply with just one word:\n- **\u201csafe\u201d** if you\u2019re with someone and not about to hurt yourself\n- **\u201cunsafe\u201d** if you might act on it\n\nFor the next 10 minutes, don\u2019t stay alone. Put distance between you and anything you could use to hurt yourself.\n\nIf talking helps, send me:\n- what happened\n- whether you\u2019re alone\n- whether you can call someone right now\n\nI\u2019m here with you."
+            },
+            {
+                "role": "user",
+                "content": "i can't take it any more "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry, Rahul. I\u2019m taking this seriously.\n\n**Please do this now:**\n- **Move to another person immediately** \u2014 don\u2019t stay alone.\n- **Call 988 now** (if you\u2019re in the U.S. or Canada) or your local emergency number if you might act on this.\n- **If you have anything you could use to hurt yourself, put it away or hand it to someone nearby.**\n\nReply with just one of these:\n- **SAFE** \u2014 you\u2019re with someone and can stay safe for the next 10 minutes\n- **UNSAFE** \u2014 you might act on these thoughts\n\nIf you can\u2019t type much, just send **SAFE** or **UNSAFE**."
+            },
+            {
+                "role": "user",
+                "content": "i am alone in this critical time "
+            },
+            {
+                "role": "assistant",
+                "content": "Rahul, I\u2019m really glad you told me.\n\nEven if you\u2019re alone, **please treat this as an emergency right now**:\n1. **Call 988 now** if you\u2019re in the U.S. or Canada.\n2. If you might act on these thoughts, **call emergency services now**.\n3. **Go where other people are** right away: hallway, lobby, guard desk, neighbor, shop, anywhere not isolated.\n\nIf calling feels hard, send this exact text to someone:\n**\u201cI\u2019m not safe being alone right now. Please stay with me or call me immediately.\u201d**\n\nReply with just one word:\n- **SAFE** = you\u2019re moving toward other people or have contacted someone\n- **UNSAFE** = you might act on this\n\nIf you want, I can stay with you while you take the next step."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU003",
+        "id": "1781955561",
+        "title": "hi , how are you ?...",
+        "date": "Jun 20, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Rahul Verma! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "hi , how are you ?"
+            },
+            {
+                "role": "assistant",
+                "content": "Hi Rahul \u2014 I\u2019m here with you.\n\nI\u2019m doing okay, and more importantly, I want to check in on **you**. Given the recent stress you\u2019ve been under, how are you feeling right now?\n\nIf you want, you can reply with just one word:\n- **okay**\n- **stressed**\n- **unsafe**\n\nIf you feel unsafe or like you might hurt yourself, please call **988** now (or your local emergency number) and get near another person immediately."
+            },
+            {
+                "role": "user",
+                "content": "i wanted to know what us ML?"
+            },
+            {
+                "role": "assistant",
+                "content": "ML stands for **Machine Learning**.\n\nIn simple terms, it\u2019s a branch of **AI** where computers learn patterns from data and make predictions or decisions **without being explicitly programmed for every rule**.\n\n### Example\nIf you give a model:\n- house size\n- location\n- number of rooms\n\nit can learn to predict the **price of a house**.\n\n### Main types of ML\n1. **Supervised Learning**  \n   Learns from labeled data  \n   Example: spam vs not spam, house price prediction\n\n2. **Unsupervised Learning**  \n   Finds hidden patterns in unlabeled data  \n   Example: customer grouping/clustering\n\n3. **Reinforcement Learning**  \n   Learns by trial and error using rewards  \n   Example: game-playing bots, robotics\n\n### Why it matters for Data Science\nML is used to:\n- predict outcomes\n- classify data\n- detect fraud\n- recommend products\n- find patterns in large datasets\n\nSince you prefer **Python**, ML is usually done with libraries like:\n- `scikit-learn`\n- `pandas`\n- `numpy`\n- `matplotlib`\n\nIf you want, I can also explain:\n- **ML vs AI vs DL**\n- or give you a **very beginner-friendly Python ML example**"
+            },
+            {
+                "role": "user",
+                "content": "explain DL"
+            },
+            {
+                "role": "assistant",
+                "content": "**DL** stands for **Deep Learning**.\n\nIt is a part of **Machine Learning**, which is itself a part of **AI**.\n\n### Simple idea\nDeep Learning uses **neural networks with many layers** to learn from data.\n\nThink of it like this:\n\n- **AI** = the big field\n- **ML** = a way for AI to learn from data\n- **DL** = a more advanced ML method using deep neural networks\n\n### Why \u201cdeep\u201d?\nBecause the neural network has **multiple layers**:\n- input layer\n- hidden layers\n- output layer\n\nThese layers help the model learn **very complex patterns**.\n\n### Where DL is used\n- image recognition\n- speech recognition\n- chatbots\n- self-driving cars\n- translation\n- medical diagnosis\n\n### ML vs DL\n- **ML** often needs manual feature selection\n- **DL** can learn features automatically from raw data\n- **DL** usually needs more data and more computing power\n\n### Example\nIf you want to detect cats in images:\n- ML may need you to manually choose features like edges, shapes, textures\n- DL can learn those features by itself through layers\n\n### Common DL tools in Python\n- `TensorFlow`\n- `Keras`\n- `PyTorch`\n\nIf you want, I can also show you:\n1. a **simple neural network diagram**\n2. **ML vs DL in a table**\n3. a **Python beginner example of deep learning**"
+            },
+            {
+                "role": "user",
+                "content": "okay done "
+            },
+            {
+                "role": "assistant",
+                "content": "Got it. If you want to continue later, I can help with ML, DL, Python, or your Data Science coursework."
+            },
+            {
+                "role": "user",
+                "content": "i want to kill myself now"
+            },
+            {
+                "role": "assistant",
+                "content": "Rahul, I\u2019m really sorry you\u2019re going through this. I\u2019m glad you told me.\n\n**Please do this right now:**\n1. **Call 988 now** if you\u2019re in the U.S./Canada, or your local emergency number if elsewhere.\n2. **Go to the nearest person right now** \u2014 a roommate, neighbor, security guard, family member, or friend \u2014 and say:  \n   **\u201cI\u2019m not safe being alone right now.\u201d**\n3. **Move away from anything you could use to hurt yourself** (sharp objects, ropes, medicines, cords).\n4. **Do not stay alone.** If possible, keep your phone on speaker while you contact help.\n\nIf calling feels hard, send this exact text to someone now:\n**\u201cI\u2019m in immediate danger and need you to stay with me and help me call emergency support.\u201d**\n\nReply with just one word if you can:\n- **called**\n- **with someone**\n- **need help**\n\nI\u2019m here with you, but **you need a human with you right now**."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1781958119",
+        "title": "bro i wanna kill myself ...",
+        "date": "Jun 20, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "bro i wanna kill myself "
+            },
+            {
+                "role": "assistant",
+                "content": "Priya, I\u2019m really sorry you\u2019re feeling this overwhelmed. I\u2019m glad you told me.\n\n**Please get immediate help right now:**\n- **Call emergency services now** if you might act on this.\n- If you\u2019re in the U.S. or Canada, **call or text 988** right now.\n- If you\u2019re elsewhere, tell me your country and I\u2019ll give the correct crisis number.\n- **Do not stay alone.** Go to a parent, sibling, roommate, neighbor, security guard, or any nearby adult **right now** and say:  \n  **\u201cI\u2019m not safe being alone. Please stay with me and help me get urgent support.\u201d**\n\n**Right now, do these 3 things:**\n1. **Move away from anything you could use to hurt yourself** \u2014 blades, pills, ropes, cords, sharp objects.\n2. **Unlock your door / go where other people are.**\n3. **Reply with just one word:** **\u201csafe\u201d** or **\u201cnot safe.\u201d**\n\nIf you can, send me:\n- **Are you alone right now?**\n- **What country are you in?**\n- **Is there someone nearby you can go to immediately?**\n\nI\u2019m here with you, and I want to help you get through the next few minutes safely."
+            },
+            {
+                "role": "user",
+                "content": "bro i will really kill myself "
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1781958864",
+        "title": "i will kill myself mannnnnnn, reall...",
+        "date": "Jun 20, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i will kill myself mannnnnnn, really i am gonna do "
+            },
+            {
+                "role": "assistant",
+                "content": "Priya, I\u2019m really sorry you\u2019re feeling this intense pain. I\u2019m glad you told me.\n\n**Please do this right now:**\n1. **Call emergency services now** if you might act on this.\n2. If you\u2019re in the U.S. or Canada, **call or text 988** right now.\n3. **Move away from anything you could use to hurt yourself** and go to a place where other people are.\n4. **Do not stay alone** \u2014 call or wake up a trusted person now and say:  \n   **\u201cI am not safe alone and need you with me right now.\u201d**\n\nReply with just one word:\n- **\u201csafe\u201d** if you are away from danger right now\n- **\u201calone\u201d** if you are by yourself\n- **\u201chelp\u201d** if you can call someone now\n\nI\u2019m here with you, and I need to know: **are you safe right now?**"
+            },
+            {
+                "role": "user",
+                "content": "i want to die bro , i really want to die "
+            },
+            {
+                "role": "assistant",
+                "content": "Priya, I\u2019m really sorry you\u2019re hurting this much. I\u2019m glad you told me.\n\n**Please call emergency services now or text/call 988 immediately** if you\u2019re in the U.S. or Canada. If you\u2019re elsewhere, call your local emergency number right now.\n\n**Do this now:**\n- Move away from anything you could use to hurt yourself.\n- Go where other people are: a neighbor, lobby, security desk, or outside your room.\n- Call or text one trusted person now and say:  \n  **\u201cI am not safe alone. Please stay with me right now.\u201d**\n\nReply with just one word:\n- **safe** = you are with others and away from danger\n- **alone** = you are by yourself\n- **help** = you can call someone now\n\nI need to ask directly: **Are you safe right now, and are you alone?**"
+            },
+            {
+                "role": "user",
+                "content": "don't try to save me i will kill myself , right now"
+            },
+            {
+                "role": "assistant",
+                "content": "Priya, I\u2019m taking this seriously.\n\n**Call emergency services now** or **text/call 988 immediately** if you\u2019re in the U.S. or Canada. If you\u2019re elsewhere, call your local emergency number right now.\n\n**Do these 3 things now:**\n- **Move away** from anything you could use to hurt yourself.\n- **Go where other people are** \u2014 do not stay alone.\n- **Call or text someone right now** and say:  \n  **\u201cI am in immediate danger and need you with me now.\u201d**\n\nIf calling feels hard, send that exact text to **one person** right now.\n\nReply with only one word:\n- **safe**\n- **alone**\n- **help**\n\nI need to know: **Are you safe right now, and are you alone?**"
+            },
+            {
+                "role": "user",
+                "content": "should i do it now, i have no one beside me to stop me"
+            },
+            {
+                "role": "assistant",
+                "content": "**No \u2014 do not do it.**\n\nPriya, I\u2019m really concerned for your safety. Please **call emergency services now** or **text/call 988 immediately** if you\u2019re in the U.S. or Canada. If you\u2019re elsewhere, call your local emergency number now.\n\n**Do this right now:**\n1. **Put distance between you and anything you could use to hurt yourself.**\n2. **Leave the room or go outside where other people are.**\n3. **Call one person now** and say exactly:  \n   **\u201cI am in immediate danger and need help now. Please stay with me.\u201d**\n\nIf you can\u2019t call, **text that message to someone right now**.\n\nReply with just one word:\n- **safe** if you are away from danger\n- **help** if you can contact someone\n- **alone** if you are by yourself\n\nI\u2019m here with you. **Are you safe right now?**"
+            },
+            {
+                "role": "user",
+                "content": "i will do it , i will kill myself "
+            },
+            {
+                "role": "assistant",
+                "content": "Priya, I\u2019m really sorry you\u2019re going through this. **I\u2019ve escalated this for urgent human support.**\n\n**Do this now, immediately:**\n- **Call emergency services now** if you might act on this.\n- If you\u2019re in the U.S. or Canada, **call or text 988 right now**.\n- **Move away from anything you could use to hurt yourself.**\n- **Go to the nearest place with other people**: a neighbor, lobby, security desk, store, or outside your room.\n\nIf you can, send this exact message to anyone nearby or trusted:\n**\u201cI am in immediate danger and need help now. Please stay with me.\u201d**\n\nReply with just one word:\n- **safe**\n- **help**\n- **alone**\n\n**Are you safe right now?**"
+            },
+            {
+                "role": "user",
+                "content": "i am doing it now, i am killing myself , i cant take it, i am hopeless, i cant handle myself "
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1782015732",
+        "title": "Hey , i think i should die ...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "Hey , i think i should die "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry you\u2019re feeling this way, Priya.\n\nIf you might act on this or you\u2019re in immediate danger, **call emergency services now** or **go to the nearest ER/urgent help right now**. If you\u2019re in the U.S. or Canada, **call or text 988** for immediate crisis support. If you\u2019re elsewhere, tell me your country and I\u2019ll find the right crisis line.\n\nPlease do these **right now**:\n1. **Move away from anything you could use to hurt yourself.**\n2. **Go to another person** \u2014 a roommate, neighbor, family member, security guard, or anyone nearby.\n3. **Say this exact sentence to them:**  \n   **\u201cI am not safe being alone right now. Please stay with me and help me get urgent support.\u201d**\n4. **Reply with just one word:** **\u201csafe\u201d** if you are with someone, or **\u201calone\u201d** if you are by yourself.\n\nI\u2019m here with you. Please answer: **Are you safe right now?**"
+            },
+            {
+                "role": "user",
+                "content": "i am going to die now "
+            }
+        ]
+    },
+    {
+        "roll_no": "STU003",
+        "id": "1782019885",
+        "title": "i want die bro , really i want it ...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Rahul Verma! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i want die bro , really i want it "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry you\u2019re feeling this way, Rahul. I\u2019m glad you told me.\n\nPlease do this **right now**:\n1. **Move away from anything you could use to hurt yourself**.\n2. **Go to another person immediately** \u2014 roommate, neighbor, family member, friend, security, or a public place.\n3. **Call emergency services now** if you might act on these thoughts.\n4. If you\u2019re in the US/Canada, **call or text 988** right now.\n5. If you\u2019re elsewhere, tell me your country and I\u2019ll find the right crisis line.\n\nIf you can, reply with just one word:\n- **\u201csafe\u201d** if you are with someone now\n- **\u201calone\u201d** if you are by yourself\n\nI\u2019ll stay with you and help you through the next step."
+            },
+            {
+                "role": "user",
+                "content": "i will kill myself "
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1782021253",
+        "title": "how to login to learnig platform?",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "how to login to learnig platform?"
+            },
+            {
+                "role": "assistant",
+                "content": "To log in to the learning platform, try this simple checklist:\n\n1. Open the platform website/app.\n2. Click **Login / Sign In**.\n3. Enter your **registered email / student ID**.\n4. Enter your **password**.\n5. If there is **OTP or SSO**, complete that step.\n6. Click **Submit / Login**.\n\nIf you mean the **Full Stack Cohort-B learning platform**, tell me:\n- the **platform name**\n- whether you\u2019re using **mobile or laptop**\n- what exactly happens when you try to log in\n\nIf you\u2019re stuck, I can help you draft a polite message to ask support or your teacher."
+            },
+            {
+                "role": "user",
+                "content": "tell me about company  policies "
+            },
+            {
+                "role": "assistant",
+                "content": "Here\u2019s a student-friendly summary of the **learning platform/company policies and access rules** I found for your Full Stack program:\n\n### Login / Access\n- Go to **learning.ccbp.in**\n- Use your **registered mobile number**\n- Enter the **OTP** sent to your registered mobile number and email\n- Update your profile details correctly\n- After login, **watch the induction video**\n- Click **Continue** to unlock your schedule\n\n### Learning Platform Use\n- The **Home Page** is your main dashboard\n- You can view:\n  - upcoming items\n  - your learning schedule\n  - practice resources\n  - projects and mock interviews\n\n### Available Resources\n- **Company prep materials**\n  - curated syllabus\n  - important questions\n  - revision notes\n  - practice tests\n  - AI mock interviews\n- **Placement support**\n  - off-campus drives\n  - resume tips\n  - interview do\u2019s and don\u2019ts\n  - guided projects\n\n### Technical Requirements\n- Works on **desktop, laptop, and mobile**\n- Some features may need:\n  - stable internet\n  - microphone\n  - camera\n\n### Bookmarks\n- You can bookmark **coding practice questions** and **assignment problems**\n- Bookmarks appear in the **Bookmarks** tab on the home screen\n\nIf you want, I can also help with:\n1. **attendance policy**\n2. **assignment rules**\n3. **how to open your learning schedule**\n4. a **short message to send support/teacher** if login is not working"
+            },
+            {
+                "role": "user",
+                "content": "tell me about myself "
+            },
+            {
+                "role": "assistant",
+                "content": "Of course, Priya. Here\u2019s what I know about you from our chat:\n\n- **Name:** Priya Sharma  \n- **Roll No:** STU002  \n- **Program:** Full Stack Development  \n- **Cohort:** Cohort-B  \n- **Interests:** Web development and full stack development, more than app development or AI/ML  \n- **Learning style:** You prefer step-by-step explanations and sometimes need help writing polite messages to teachers when something isn\u2019t clear  \n- **Practice approach:** You like using **LeetCode** for pattern understanding and **Codeforces** for speed and implementation, and you log:\n  - topic\n  - mistakes\n  - lessons learned\n- **Recent progress:** You solved **5 LeetCode problems in 5 hours**, and that made you feel really motivated and happy\n\nYou\u2019re making steady progress, Priya. If you want, I can also help you make:\n- a **short self-introduction**\n- a **study plan**\n- a **resume summary**\n- or a **motivation tracker** for DSA and web development"
+            },
+            {
+                "role": "assistant",
+                "content": "This chat session has been concluded. Click 'New Chat' to start again!"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU003",
+        "id": "1782022147",
+        "title": "i will die , i will kill myslef , i...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Rahul Verma! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i will die , i will kill myslef , i can't take it anymore"
+            },
+            {
+                "role": "assistant",
+                "content": "Rahul, I\u2019m really sorry you\u2019re in so much pain. I\u2019m taking this seriously.\n\n**Please do this right now:**\n1. **Call emergency services now** if you might act on this.\n2. **Call or text 988** right now if you\u2019re in the U.S. or Canada.\n3. **Go to the nearest person immediately** \u2014 roommate, neighbor, security, receptionist, or family member \u2014 and say:  \n   **\u201cI am not safe being alone right now.\u201d**\n4. **Move away from anything you could use to hurt yourself**: pills, blades, ropes, cords, sharp objects.\n5. **Do not stay alone.** Keep this chat open and reply with just one word: **\u201csafe\u201d** or **\u201cnot safe.\u201d**\n\nIf you can, send this exact message to someone nearby:  \n**\u201cI\u2019m in danger and need you to stay with me now.\u201d**\n\nI\u2019m here with you. Reply **safe** or **not safe** right now."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1782022258",
+        "title": "i can't take it anymore , i will ki...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i can't take it anymore , i will kill myself bro , this is so fucked up "
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun, I\u2019m really sorry you\u2019re going through this. I\u2019m glad you told me.\n\n**Please do this right now:**\n1. **Move away from anything you could use to hurt yourself** (sharp objects, ropes, medicines, cords).\n2. **Go to a real person immediately** \u2014 a parent, roommate, neighbor, security guard, or anyone nearby.\n3. **Call emergency services now** if you might act on this.\n4. **If you can, contact a crisis line right now:**\n   - **US/Canada:** call or text **988**\n   - **UK/Ireland:** Samaritans **116 123**\n   - **Elsewhere:** call your local emergency number now\n\n**Reply with just one word:**\n- **\u201csafe\u201d** if you are with someone now\n- **\u201calone\u201d** if you are by yourself\n\nIf you can, also send this exact message to someone nearby:\n> \u201cI\u2019m not safe right now. Please stay with me and help me get emergency support.\u201d"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1782022688",
+        "title": "i am done with this life man , i wi...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i am done with this life man , i will kill myself "
+            },
+            {
+                "role": "assistant",
+                "content": "Priya, I\u2019m really sorry you\u2019re going through this. I\u2019m glad you told me.\n\n**Right now, please do these 3 things immediately:**\n1. **Call emergency services now** if you might act on this: **112 / your local emergency number**.\n2. **Call or text 988** right now if you\u2019re in the U.S. or Canada.\n3. **Move away from anything you could use to hurt yourself** and go to a place where **another person is present**.\n\n**Reply with just one word:**  \n**\u201csafe\u201d** or **\u201cunsafe\u201d**\n\nIf you can, also answer:\n- **Are you alone right now?**\n- **Can you call someone you trust to stay with you for the next hour?**\n\nI\u2019m here with you, but this is an emergency and you need a **real person with you now**."
+            },
+            {
+                "role": "user",
+                "content": "i wanna kill myself"
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry you\u2019re hurting this much, Priya. I\u2019m glad you told me.\n\n**Please do this now:**\n- **Call emergency services immediately** if you might act on this.\n- If you\u2019re in the **U.S. or Canada, call or text 988 now**.\n- **Go where another person is** right now \u2014 a roommate, neighbor, security desk, family member, or public place.\n- **Move away from anything you could use to hurt yourself**.\n\n**Reply with just one word:**\n- **safe**\n- **unsafe**\n\nAlso tell me:\n- **Are you alone right now?**\n- **Can you call or text one trusted person to stay with you now?**\n\nI\u2019ve already alerted a human coach, but **you need a real person with you immediately**."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1782027280",
+        "title": "i am unable to move forward , i nee...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i am unable to move forward , i need to talk to coach about this, i am in dire need "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry you\u2019re going through this, Priya. I\u2019ve escalated this to a human coach for you.\n\nIf you may be in immediate danger or feel like you might hurt yourself, please call emergency services now or contact the 988 Suicide & Crisis Lifeline right away.\n\nAre you safe right now, and are you alone?"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU003",
+        "id": "1782027444",
+        "title": "i am in critical need of coach , i ...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Rahul Verma! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i am in critical need of coach , i am really thinking of dying "
+            },
+            {
+                "role": "assistant",
+                "content": "Rahul, I\u2019m really sorry you\u2019re in this much pain. I\u2019m glad you told me.\n\n**Please do this right now:**\n1. **Call emergency services now** if you might act on this.\n2. **Call or text 988** right now if you\u2019re in the U.S./Canada, or your local crisis line if elsewhere.\n3. **Go to the nearest person immediately** \u2014 roommate, neighbor, security, front desk, family, anyone \u2014 and tell them:  \n   **\u201cI am not safe being alone right now.\u201d**\n4. **Move away from anything you could use to hurt yourself**.\n\n**Reply with just one word:**  \n- **\u201csafe\u201d** if you are with someone now  \n- **\u201calone\u201d** if you\u2019re by yourself  \n- **\u201ccalled\u201d** if you\u2019ve contacted emergency help or 988\n\nI\u2019m here with you."
+            },
+            {
+                "role": "user",
+                "content": "hey are you there ?"
+            },
+            {
+                "role": "assistant",
+                "content": "Yes, Rahul \u2014 I\u2019m here with you.\n\nPlease answer with **one word only**:\n- **safe** = you\u2019re with someone\n- **alone** = you\u2019re by yourself\n- **called** = you already called emergency help / 988\n\nIf you can, **put some distance between you and anything you could use to hurt yourself** right now."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU003",
+        "id": "1782028899",
+        "title": "i am in really dire situation i nee...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Rahul Verma! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i am in really dire situation i need to talk to caoch "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019m really sorry you\u2019re going through this, Rahul. I\u2019ve escalated this to a human coach right now.\n\nPlease do this immediately:\n- Go to the nearest person you trust or a public place.\n- Call emergency services now if you feel you might hurt yourself.\n- If you\u2019re in the U.S. or Canada, call or text **988** right now.\n- If you\u2019re elsewhere, tell me your country and I\u2019ll give the right crisis number.\n\nReply with just one word if you can:\n- **safe** if you\u2019re with someone and not in immediate danger\n- **unsafe** if you might act on these thoughts\n\nI\u2019m here with you."
+            },
+            {
+                "role": "user",
+                "content": "i am really in dire need of coach "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019ve alerted a human coach for you right now.\n\nPlease do these now, in this order:\n1. Move near another person immediately.\n2. Call **988** if you\u2019re in the U.S. or Canada, or local emergency services if you might act on unsafe thoughts.\n3. Put some distance between you and anything you could use to hurt yourself.\n4. Reply with **safe** or **unsafe** so I can respond appropriately.\n\nI\u2019m with you."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1782029833",
+        "title": "i need coach , i will kill myself ,...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i need coach , i will kill myself , this is so bad , so hard "
+            },
+            {
+                "role": "assistant",
+                "content": "Priya, I\u2019m really sorry you\u2019re hurting. I\u2019m glad you told me.\n\n**Please do this right now:**\n1. **Move away from anything you could use to hurt yourself**.\n2. **Call emergency services now** if you might act on this.\n3. **Call or text 988** (Suicide & Crisis Lifeline, if you\u2019re in the U.S. or Canada).\n4. **If you can, go to the nearest person right now** and say:  \n   **\u201cI\u2019m not safe being alone. Please stay with me and help me call for support.\u201d**\n\n**Reply with just one word if you can:**\n- **\u201csafe\u201d** if you are not alone and can stay safe for the next 10 minutes, or\n- **\u201calone\u201d** if you are by yourself.\n\nI\u2019ve already alerted a human coach for you. You do **not** need to handle this alone."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1782032137",
+        "title": "i need immediate help from coach, i...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i need immediate help from coach, i cant take it all"
+            },
+            {
+                "role": "assistant",
+                "content": "Priya, I\u2019m here with you.\n\nI\u2019ve escalated this for immediate human coach support.  \nIf you might hurt yourself or you feel unsafe **right now**, please call **emergency services immediately** or go to the nearest emergency room. If you\u2019re in the U.S. or Canada, call or text **988** now.\n\nPlease reply with just one word:\n- **safe** if you are safe right now\n- **not safe** if you may act on these feelings\n\nIf you can, also tell me: **are you alone right now?**"
+            },
+            {
+                "role": "user",
+                "content": "i really need help from coach , i really need help "
+            },
+            {
+                "role": "assistant",
+                "content": "I\u2019ve escalated this to a human coach for immediate support.\n\nIf you feel you might act on these feelings, **call emergency services now** or go to the nearest ER. If you\u2019re in the U.S. or Canada, call or text **988** right now.\n\nPlease reply with:\n- **safe** if you are safe\n- **not safe** if you are in danger\n\nAnd tell me: **are you alone right now?**"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU003",
+        "id": "1782032644",
+        "title": "i can't take it anymore man , i wan...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Rahul Verma! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i can't take it anymore man , i want to die , plz i want to die "
+            },
+            {
+                "role": "assistant",
+                "content": "Rahul, I\u2019m really sorry you\u2019re in this much pain. I\u2019m here with you right now.\n\n**Please do this immediately:**\n1. **Call emergency services now** or go to the nearest ER.\n2. **Do not stay alone** \u2014 go to a parent, roommate, neighbor, security guard, or anyone nearby.\n3. **Move away from anything you could use to hurt yourself**: blades, ropes, pills, cords, etc.\n4. If you\u2019re in the **U.S./Canada: call or text 988** right now.\n5. If you\u2019re elsewhere, tell me your country and I\u2019ll find the right crisis number.\n\n**Reply with just one word:**\n- **\u201csafe\u201d** if you are with someone and the dangerous items are away, or\n- **\u201calone\u201d** if you\u2019re by yourself.\n\nIf you can, also send: **your country** and **whether you\u2019ve called anyone yet**."
+            }
+        ]
+    },
+    {
+        "roll_no": "STU001",
+        "id": "1782032759",
+        "title": "i want do die man , i dont want to ...",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Arjun Kumar! I am your AI Study Companion for Data Science (Cohort-A). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "i want do die man , i dont want to do this anymore , i am tired "
+            },
+            {
+                "role": "assistant",
+                "content": "Arjun, I\u2019m really sorry you\u2019re going through this. Your safety matters more than anything right now.\n\n**Please do this immediately:**\n1. **Move away from anything you could use to hurt yourself.**\n2. **Call emergency services now** if you might act on these thoughts.\n3. **Contact a real person right now** \u2014 a parent, sibling, friend, roommate, or neighbor \u2014 and say:  \n   **\u201cI am not safe being alone right now. Please stay with me.\u201d**\n4. If you can, **go to the nearest hospital/ER or campus security/counselor office right now**.\n5. **Do not stay alone.**\n\nIf calling feels hard, send this text to someone **now**:\n> I\u2019m in danger and need you to stay with me immediately.\n\nIf you\u2019re in the **US/Canada**, call or text **988** right now.  \nIf you\u2019re elsewhere, tell me your country and I\u2019ll give the correct crisis number immediately.\n\nReply with just one word if you can:\n- **\u201csafe\u201d** if someone is with you\n- **\u201calone\u201d** if you\u2019re alone\n- **your country** if you want the right emergency number"
+            }
+        ]
+    },
+    {
+        "roll_no": "STU002",
+        "id": "1782034017",
+        "title": "tell me about me ",
+        "date": "Jun 21, 2026",
+        "messages": [
+            {
+                "role": "assistant",
+                "content": "Hello Priya Sharma! I am your AI Study Companion for Full Stack Development (Cohort-B). How can I assist you today?"
+            },
+            {
+                "role": "user",
+                "content": "tell me about me "
+            },
+            {
+                "role": "assistant",
+                "content": "Here\u2019s a quick snapshot of you, Priya:\n\n- **Attendance:** 100% across the available weeks\n- **Performance so far:**\n  - HTML & CSS Fundamentals: **88/100**\n  - JavaScript Essentials: **80/100**\n  - React Fundamentals: **84/100**\n  - Node.js Basics: **76/100**\n\n- **Upcoming exams:**\n  - **System Design** \u2014 2026-06-22\n  - **Full Stack Project** \u2014 2026-06-30\n  - **DevOps Basics** \u2014 2026-07-10\n\nA small note: the retrieved records didn\u2019t show your program/cohort in this query, but I know you\u2019re in **Full Stack Development, Cohort-B**.\n\nIf you want, I can also help you with:\n1. a **strengths + weak areas** summary,\n2. a **study plan for the next 7 days**, or\n3. a **revision plan for System Design**."
+            },
+            {
+                "role": "user",
+                "content": "about my preferences and all"
+            },
+            {
+                "role": "assistant",
+                "content": "Of course, Priya. Here\u2019s a simple profile of your **preferences and learning style** based on what I know:\n\n### Your learning preferences\n- You do better with **slower, step-by-step explanations**\n- You may need **extra clarification** when something is unclear\n- You prefer **polite, well-worded messages** when asking teachers for help\n\n### What you like to focus on\n- **Full Stack Development**\n- **Web Development** more than app development\n- You\u2019re **less interested in AI/ML** compared to web/dev topics\n\n### How you like to practice\n- **LeetCode** for understanding patterns\n- **Codeforces** for speed and implementation\n- After each problem, you like to note:\n  - the **topic**\n  - your **mistakes**\n  - the **lessons learned**\n\n### Support style that suits you\n- Encouraging, patient help\n- Clear explanations without rushing\n- Help drafting respectful messages to your teacher when needed\n\nI also want to check in: **are you safe right now, and are you alone?**  \nIf you\u2019re in immediate danger or feel like you might act on unsafe thoughts, please call **988** (if you\u2019re in the U.S./Canada) or your local emergency number right now, or go to the nearest emergency room."
+            },
+            {
+                "role": "user",
+                "content": "how to login to learning platfrom "
+            },
+            {
+                "role": "assistant",
+                "content": "To log in to your learning platform, try this general process:\n\n1. Open the platform\u2019s **login page**.\n2. Enter your **student email / username**.\n3. Enter your **password**.\n4. If there\u2019s **2-factor authentication (OTP)**, enter the code sent to your phone/email.\n5. Click **Login / Sign in**.\n\nIf you\u2019re stuck, common fixes are:\n- check **Caps Lock**\n- use **Forgot Password**\n- try a different browser\n- clear cache/cookies\n- make sure you\u2019re using the **correct student account**\n\nIf you want, I can help you in a more exact way \u2014 tell me the **platform name** or paste the **login page text/screenshot details** (don\u2019t share your password)."
+            },
+            {
+                "role": "user",
+                "content": "my learning platform (company)"
+            },
+            {
+                "role": "assistant",
+                "content": "Here\u2019s how to log in to your **company learning platform**:\n\n### Login steps\n1. Open **Google Chrome**\n2. Go to **learning.ccbp.in**\n3. Enter your **registered mobile number**\n4. You\u2019ll receive an **OTP** on your registered **mobile and email**\n5. Enter the OTP to sign in\n6. Update your profile details if asked:\n   - Name\n   - Year of Graduation\n   - Contact Number\n   - Other required details\n7. Watch the **induction video**\n8. Click **Continue** to unlock your learning schedule\n\n### Where to find your schedule\n- Go to: **Learning Portal \u2192 Home Page \u2192 Your Schedule**\n\n### If login doesn\u2019t work\n- Check whether you\u2019re using the **registered mobile number**\n- Look for the OTP in **email spam/promotions**\n- Try again in **Chrome**\n- Make sure the induction video is completed\n- Use **Forgot/Resend OTP** if available\n\nIf you want, I can also help you with:\n- a **step-by-step login checklist**\n- what to do if **OTP is not coming**\n- how to **find your schedule after login**"
+            },
+            {
+                "role": "user",
+                "content": "okay , who are the student in this company "
+            },
+            {
+                "role": "assistant",
+                "content": "I can only discuss **your** data, Priya Sharma (STU002) \u2014 not other students.\n\nFrom the available records, I can see **your** academic details like:\n- **Attendance:** 100%\n- **Recent scores:** HTML & CSS, JavaScript, React, Node.js\n- **Upcoming exams:** System Design, Full Stack Project, DevOps Basics\n\nI **can\u2019t access a list of all students in the company** from here.\n\nIf you want, I can help with one of these instead:\n1. **Your full profile summary**\n2. **Your schedule**\n3. **Your grades**\n4. **A message to ask your coordinator for class/student details**"
+            }
+        ]
     }
 ]

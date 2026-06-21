@@ -5,3 +5,4 @@ venv
 google_creds.json
 .streamlit
 .gitignore
+SETUP_GUIDE.md

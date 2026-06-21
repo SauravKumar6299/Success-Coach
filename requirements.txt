@@ -11,3 +11,8 @@ langchain_openai
 transformers
 torch
 torchvision
+langchain_classic
+langchain_community
+pandas
+requests
+google-api-python-client
